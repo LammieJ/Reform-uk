@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   const menuItems = [
     { label: 'Home', href: '/' },
@@ -27,121 +27,129 @@ export default function Navigation() {
   ]
 
   return (
-    <div className="relative">
-      {/* Logo and mobile menu button */}
-      <div className="flex items-center justify-between">
-        <Link href="/" className="flex flex-col">
-          <div className="flex items-center space-x-2">
-            <span className="font-heading text-2xl font-bold">ReformUK</span>
-            <span className="text-lg">Erdington</span>
-          </div>
-          <span className="text-md text-gray-600">Castle Vale, Pype Hayes, Stockland Green, Kingstanding.</span>
-        </Link>
-        
-        {/* Mobile menu button */}
-        <button
-          className="lg:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            {isMenuOpen ? (
-              <path d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+    <header className="bg-reform-primary shadow-sm">
+      <div className="container mx-auto max-w-7xl px-4">
+        {/* Top bar */}
+        <div className="text-center py-2 text-sm text-white/90 border-b border-white/20">
+          Castle Vale • Pype Hayes • Stockland Green • Kingstanding
+        </div>
 
-        {/* Desktop navigation */}
-        <nav className="hidden lg:flex lg:items-center lg:space-x-8">
-          {menuItems.map((item) => (
-            item.subItems ? (
-              <div key={item.href} className="relative group">
-                <button 
-                  className="flex items-center space-x-1 hover:text-reform-light transition-colors duration-200"
-                  onMouseEnter={() => setIsDropdownOpen(true)}
-                  onMouseLeave={() => setIsDropdownOpen(false)}
-                >
-                  <span>{item.label}</span>
-                  <svg 
-                    className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                <div 
-                  className={`absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg transform transition-all duration-200 ${
-                    isDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-                  }`}
-                  onMouseEnter={() => setIsDropdownOpen(true)}
-                  onMouseLeave={() => setIsDropdownOpen(false)}
-                >
-                  {item.subItems.map((subItem) => (
-                    <Link
-                      key={subItem.href}
-                      href={subItem.href}
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-reform-light hover:text-white transition-colors duration-200 first:rounded-t-md last:rounded-b-md"
-                    >
-                      {subItem.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="hover:text-reform-light transition-colors duration-200"
-              >
-                {item.label}
-              </Link>
-            )
-          ))}
-          <a
-            href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-reform-light transition-colors duration-200"
-          >
-            Our Contract
-          </a>
-          <a
-            href="https://www.facebook.com/groups/916932353577131/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-          >
-            Join Facebook Group
-          </a>
-        </nav>
-      </div>
+        {/* Main navigation */}
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center text-white">
+            <span className="text-2xl font-bold">ReformUK</span>
+            <span className="ml-2 text-lg">Erdington</span>
+          </Link>
 
-      {/* Mobile navigation */}
-      {isMenuOpen && (
-        <nav className="absolute top-full left-0 right-0 bg-reform-primary mt-2 py-4 lg:hidden rounded-lg shadow-lg">
-          <div className="flex flex-col space-y-2">
-            {menuItems.map((item) => (
+          {/* Desktop menu */}
+          <nav className="hidden lg:flex lg:items-center lg:gap-6">
+            {menuItems.map((item) => 
               item.subItems ? (
-                <div key={item.href} className="px-4">
-                  <div className="font-semibold text-white mb-2">{item.label}</div>
-                  <div className="pl-4 space-y-2">
+                <div key={item.href} className="relative">
+                  <button 
+                    className="text-white text-sm font-medium flex items-center gap-1 hover:bg-white/10 transition-colors duration-200 px-3 py-2 rounded-md"
+                    onMouseEnter={() => setOpenDropdown(item.href)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
+                    {item.label}
+                    <svg 
+                      className={`w-4 h-4 transform transition-transform duration-200 ${
+                        openDropdown === item.href ? 'rotate-180' : ''
+                      }`}
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div 
+                    className={`absolute left-0 mt-1 w-48 bg-white rounded shadow-lg py-1 transform transition-all duration-200 ${
+                      openDropdown === item.href ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                    }`}
+                    onMouseEnter={() => setOpenDropdown(item.href)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
                     {item.subItems.map((subItem) => (
                       <Link
                         key={subItem.href}
                         href={subItem.href}
-                        className="block py-2 text-white/90 hover:text-white transition-colors duration-200"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-reform-primary hover:text-white"
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-white text-sm font-medium hover:bg-white/10 transition-colors duration-200 px-3 py-2 rounded-md"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
+            <a
+              href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm font-medium hover:bg-white/10 transition-colors duration-200 px-3 py-2 rounded-md"
+            >
+              Our Contract
+            </a>
+            <a
+              href="https://www.facebook.com/groups/916932353577131/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-reform-primary px-5 py-2 text-sm font-medium rounded-md hover:bg-white/90 transition-colors duration-200 ml-2"
+            >
+              Join Facebook Group
+            </a>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden text-white p-2 hover:bg-white/10 transition-colors duration-200 rounded-md"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {isMenuOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        <div className={`lg:hidden border-t border-white/20 overflow-hidden transition-all duration-300 ${
+          isMenuOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="py-4 bg-gradient-to-b from-black/5 to-transparent">
+            {menuItems.map((item) => (
+              item.subItems ? (
+                <div key={item.href} className="mb-4">
+                  <div className="text-white font-medium mb-2 px-2">
+                    {item.label}
+                  </div>
+                  <div className="pl-4">
+                    {item.subItems.map((subItem) => (
+                      <Link
+                        key={subItem.href}
+                        href={subItem.href}
+                        className="block text-white/90 hover:text-white hover:bg-white/10 py-2 px-3 transition-colors duration-200 rounded-md"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {subItem.label}
@@ -153,34 +161,36 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-4 py-2 text-white hover:bg-reform-light/20 transition-colors duration-200"
+                  className="block text-white hover:text-white hover:bg-white/10 py-2 px-3 transition-colors duration-200 rounded-md"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               )
             ))}
-            <a
-              href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-4 py-2 text-white hover:bg-reform-light/20 transition-colors duration-200"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Our Contract
-            </a>
-            <a
-              href="https://www.facebook.com/groups/916932353577131/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-4 px-4 py-2 bg-white text-reform-primary rounded-lg text-center hover:bg-reform-light hover:text-white transition-colors duration-200"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Join Facebook Group
-            </a>
+            <div className="mt-4 pt-4 border-t border-white/20 px-2">
+              <a
+                href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-white hover:text-white hover:bg-white/10 py-2 px-3 transition-colors duration-200 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Our Contract
+              </a>
+              <a
+                href="https://www.facebook.com/groups/916932353577131/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white text-reform-primary px-4 py-2 rounded-md mt-4 hover:bg-white/90 transition-colors duration-200 text-center mx-3"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Join Facebook Group
+              </a>
+            </div>
           </div>
-        </nav>
-      )}
-    </div>
+        </div>
+      </div>
+    </header>
   )
 }
