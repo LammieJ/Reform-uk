@@ -1,12 +1,18 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
+  output: 'standalone',
   images: {
-    unoptimized: true,
-    domains: ['oaidalleapiprodscus.blob.core.windows.net'],
+    domains: ['images.unsplash.com'],
   },
   experimental: {
-    serverActions: {
-      allowedOrigins: ['localhost:3000', 'localhost:3001', 'localhost:3002', 'localhost:3003'],
-    },
+    optimizePackageImports: ['@heroicons/react'],
+  },
+  webpack: (config) => {
+    config.watchOptions = {
+      ignored: ['**/node_modules', '**/.next'],
+    }
+    return config
   },
 }
+
+module.exports = nextConfig
