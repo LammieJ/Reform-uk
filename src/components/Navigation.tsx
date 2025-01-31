@@ -30,9 +30,12 @@ export default function Navigation() {
     <div className="relative">
       {/* Logo and mobile menu button */}
       <div className="flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="font-heading text-2xl font-bold">ReformUK</span>
-          <span className="text-lg">Erdington</span>
+        <Link href="/" className="flex flex-col">
+          <div className="flex items-center space-x-2">
+            <span className="font-heading text-2xl font-bold">ReformUK</span>
+            <span className="text-lg">Erdington</span>
+          </div>
+          <span className="text-md text-gray-600">Castle Vale, Pype Hayes, Stockland Green, Kingstanding.</span>
         </Link>
         
         {/* Mobile menu button */}
