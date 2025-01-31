@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { getContent } from '@/utils/content'
 import NewsletterSignup from '@/components/NewsletterSignup'
 import SocialFeed from '@/components/SocialFeed'
@@ -49,13 +50,13 @@ export default function Home() {
               We're committed to cutting taxes, reducing net migration to zero, protecting our NHS, and bringing common sense back to local governance. Together, we can build stronger, more prosperous communities where your voice matters and your vote counts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
+              <Link
                 href="/join"
                 className="btn bg-white text-reform-primary dark:bg-reform-dark dark:text-white hover:bg-reform-light dark:hover:bg-reform-secondary text-lg px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:scale-105 relative overflow-hidden group"
               >
                 <span className="relative z-10">Join Us Today</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 dark:from-reform-dark/0 dark:via-reform-dark/30 dark:to-reform-dark/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              </a>
+              </Link>
               <a
                 href="#priorities"
                 className="btn border-2 border-white text-white hover:border-reform-light hover:text-reform-light text-lg px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:scale-105 relative overflow-hidden group"
@@ -160,18 +161,18 @@ export default function Home() {
             Together, we can build a better future for Erdington, Castle Vale, Pype Hayes, Stockland Green, and Kingstanding. Join us in our mission to bring positive change to our communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a
-              href="/join"
-              className="btn bg-white text-reform-dark dark:bg-reform-dark dark:text-white hover:bg-white/90 dark:hover:bg-reform-dark/90 text-lg px-10 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all hover:shadow-lg"
-            >
-              Become a Member
-            </a>
-            <a
-              href="/volunteer"
-              className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all"
-            >
-              Volunteer
-            </a>
+              <Link
+                href="/join"
+                className="btn bg-white text-reform-dark dark:bg-reform-dark dark:text-white hover:bg-white/90 dark:hover:bg-reform-dark/90 text-lg px-10 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all hover:shadow-lg"
+              >
+                Become a Member
+              </Link>
+              <Link
+                href="/volunteer"
+                className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all"
+              >
+                Volunteer
+              </Link>
           </div>
         </div>
       </section>

@@ -35,6 +35,9 @@ export default function Navigation() {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
+            <Link href="/join" className="text-reform-dark dark:text-white hover:text-reform-primary dark:hover:text-reform-light font-medium transition-all duration-300 hover:-translate-y-0.5">
+              Join
+            </Link>
             <Link href="/about" className="text-reform-dark dark:text-white hover:text-reform-primary dark:hover:text-reform-light font-medium transition-all duration-300 hover:-translate-y-0.5">
               About
             </Link>
@@ -160,6 +163,7 @@ export default function Navigation() {
         >
           <div className="py-4 space-y-2 border-t border-reform-primary/10 dark:border-white/10 px-2">
             {[
+              { href: '/join', text: 'Join' },
               { href: '/about', text: 'About' },
               { href: '/events', text: 'Events' }
             ].map((item) => (
