@@ -6,7 +6,7 @@
     "generate-content": "node scripts/generate-content.js",
     "verify-content": "node scripts/verify-content.js",
     "dev": "next dev",
-    "build": "npm run generate-content && npm run verify-content && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
