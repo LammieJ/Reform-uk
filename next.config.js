@@ -7,9 +7,16 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['@heroicons/react'],
   },
+  // Disable file watching to prevent stack overflow
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
+  },
+  // Simplify webpack configuration
   webpack: (config) => {
     config.watchOptions = {
-      ignored: ['**/node_modules', '**/.next'],
+      poll: false,
+      ignored: ['**/.git/**', '**/node_modules/**', '**/.next/**'],
     }
     return config
   },
