@@ -1,25 +1,13 @@
-'use client'
-
+import { ThemeProvider } from '@/components/ThemeProvider'
 import './globals.css'
-import { Roboto, Montserrat } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react'
+import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { ThemeProvider } from '@/context/ThemeContext'
-import { Metadata } from 'next'
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-  display: 'swap',
-  variable: '--font-roboto',
-})
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-montserrat',
-})
+export const metadata: Metadata = {
+  title: 'Reform UK Erdington',
+  description: 'Reform UK Erdington Branch - Making real change in Erdington',
+}
 
 export default function RootLayout({
   children,
@@ -27,21 +15,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-GB" suppressHydrationWarning>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body className={`${roboto.variable} ${montserrat.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <ThemeProvider>
-          <div className="min-h-screen bg-white dark:bg-gray-900 text-reform-dark dark:text-white">
-            <Navigation />
-            <main className="min-h-screen">
-              {children}
-            </main>
-            <Footer />
-          </div>
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   )
