@@ -100,14 +100,24 @@ export default function Navigation() {
             >
               Our Contract
             </a>
-            <a
-              href="https://www.facebook.com/groups/916932353577131/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-reform-primary px-5 py-2 text-sm font-medium rounded-md hover:bg-white/90 transition-colors duration-200 ml-2"
-            >
-              Join Facebook Group
-            </a>
+            <div className="flex items-center gap-2">
+              <a
+                href="https://twitter.com/ReformErdington"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-reform-primary px-5 py-2 text-sm font-medium rounded-md hover:bg-white/90 transition-colors duration-200"
+              >
+                Follow on X
+              </a>
+              <a
+                href="https://www.facebook.com/groups/916932353577131/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-reform-primary px-5 py-2 text-sm font-medium rounded-md hover:bg-white/90 transition-colors duration-200"
+              >
+                Facebook Group
+              </a>
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -178,15 +188,26 @@ export default function Navigation() {
               >
                 Our Contract
               </a>
-              <a
-                href="https://www.facebook.com/groups/916932353577131/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block bg-white text-reform-primary px-4 py-2 rounded-md mt-4 hover:bg-white/90 transition-colors duration-200 text-center mx-3"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Join Facebook Group
-              </a>
+              <div className="flex flex-col gap-2 px-3 mt-4">
+                <a
+                  href="https://twitter.com/ReformErdington"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white text-reform-primary px-4 py-2 rounded-md hover:bg-white/90 transition-colors duration-200 text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Follow on X
+                </a>
+                <a
+                  href="https://www.facebook.com/groups/916932353577131/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white text-reform-primary px-4 py-2 rounded-md hover:bg-white/90 transition-colors duration-200 text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Facebook Group
+                </a>
+              </div>
             </div>
           </div>
         </div>

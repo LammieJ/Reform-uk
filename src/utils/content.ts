@@ -86,7 +86,7 @@ const content: GeneratedContent = {
     keyIssues: {
       economy: "We're committed to cutting taxes and reducing red tape to help Erdington's businesses thrive. Our plan includes a 50% business rates cut, lower income tax, and simplified regulations to boost local enterprise and create jobs through practical, common-sense policies.",
       safety: "Community safety is essential. We're pushing for increased police presence, tougher sentencing, and effective community-led initiatives. Our approach combines Reform UK's commitment to law and order with local action to make Erdington safer.",
-      housing: "Everyone deserves affordable housing. We're advocating for practical solutions that prioritize local needs, focusing on both new housing and improving existing stock while ensuring our infrastructure can support development. Our zero net migration policy will help reduce pressure on local housing."
+      housing: "Everyone deserves affordable housing. We're advocating for practical solutions that prioritise local needs, focussing on both new housing and improving existing stock while ensuring our infrastructure can support development. Our zero net migration policy will help reduce pressure on local housing."
     }
   },
   about: {
@@ -114,7 +114,7 @@ const content: GeneratedContent = {
         {
           name: "Sarah Thompson",
           role: "Branch Coordinator",
-          bio: "A lifelong Erdington resident with 15 years of community organizing experience.",
+          bio: "A lifelong Erdington resident with 15 years of community organising experience.",
           image: "/images/team/sarah.jpg"
         },
         {
@@ -126,7 +126,7 @@ const content: GeneratedContent = {
         {
           name: "Dr. Amira Patel",
           role: "Policy Advisor",
-          bio: "Healthcare professional focused on improving local services.",
+          bio: "Healthcare professional focussed on improving local services.",
           image: "/images/team/amira.jpg"
         }
       ]
@@ -145,7 +145,7 @@ const content: GeneratedContent = {
         },
         {
           title: "Community First",
-          description: "We prioritize the needs of local residents while supporting national reform objectives."
+          description: "We prioritise the needs of local residents while supporting national reform objectives."
         },
         {
           title: "Delivery Focused",
