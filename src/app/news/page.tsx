@@ -1,55 +1,80 @@
 import { getContent } from '@/utils/content'
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 
-const mockArticles = [
+interface NewsArticle {
+  title: string;
+  date: string;
+  excerpt: string;
+  image: string;
+  url: string;
+}
+
+const mockArticles: NewsArticle[] = [
   {
     title: 'Reform UK Erdington Launches Local Campaign',
-    date: 'January 30, 2025',
+    date: '30 January 2025',
     excerpt: 'Reform UK has officially launched its campaign in Erdington, focusing on key local issues including community safety, economic growth, and public services.',
     image: '/images/hero.jpg',
     url: '/news/campaign-launch',
   },
   {
     title: 'Local Business Initiative Announced',
-    date: 'January 28, 2025',
+    date: '28 January 2025',
     excerpt: 'New proposals to support local businesses in Erdington, including reduced business rates and improved infrastructure.',
     image: '/images/growth-hero.jpg',
     url: '/news/business-initiative',
   },
   {
     title: 'Community Safety Plan Revealed',
-    date: 'January 25, 2025',
-    excerpt: 'Comprehensive plan to address community safety concerns in Erdington, including increased police presence and youth programs.',
+    date: '25 January 2025',
+    excerpt: 'Comprehensive plan to address community safety concerns in Erdington, including increased police presence and youth programmes.',
     image: '/images/crime-hero.jpg',
     url: '/news/safety-plan',
   },
   {
     title: 'Healthcare Services Improvement Plan',
-    date: 'January 23, 2025',
+    date: '23 January 2025',
     excerpt: 'Detailed proposals for improving local healthcare services, including reduced waiting times and better access to GP services.',
     image: '/images/nhs-hero.jpg',
     url: '/news/healthcare-plan',
   },
   {
     title: 'Local Transport Infrastructure Update',
-    date: 'January 20, 2025',
+    date: '20 January 2025',
     excerpt: 'Plans revealed for improving local transport links and infrastructure in Erdington and surrounding areas.',
     image: '/images/about-hero.jpg',
     url: '/news/transport-update',
   },
   {
-    title: 'Education Investment Program',
-    date: 'January 18, 2025',
-    excerpt: 'New initiative announced to invest in local schools and education programs in the Erdington area.',
+    title: 'Education Investment Programme',
+    date: '18 January 2025',
+    excerpt: 'New initiative announced to invest in local schools and education programmes in the Erdington area.',
     image: '/images/events-hero.jpg',
     url: '/news/education-program',
   },
 ]
 
+export const metadata: Metadata = {
+  title: 'News | Reform UK Erdington',
+  description: 'Stay informed about Reform UK Erdington\'s campaign, local developments, and our work to improve the community. Read our latest news and updates.',
+  openGraph: {
+    title: 'News | Reform UK Erdington',
+    description: 'Stay updated with the latest news from Reform UK Erdington. Read about our campaign, local developments, and community initiatives.',
+    images: [{ url: '/images/hero.jpg', width: 1200, height: 630, alt: 'Reform UK Erdington News' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'News | Reform UK Erdington',
+    description: 'Stay updated with the latest news from Reform UK Erdington. Read about our campaign, local developments, and community initiatives.',
+    images: ['/images/hero.jpg'],
+  },
+}
+
 export default function NewsPage() {
   const content = getContent()
-  
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
@@ -68,7 +93,7 @@ export default function NewsPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mockArticles.map((article, index) => (
+            {mockArticles.map((article: NewsArticle, index: number) => (
               <article key={index} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
                 <div className="relative h-48">
                   <Image

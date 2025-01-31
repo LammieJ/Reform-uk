@@ -1,5 +1,22 @@
 import Image from 'next/image'
 import { getContent } from '@/utils/content'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Us | Reform UK Erdington',
+  description: 'Learn about Reform UK Erdington\'s mission, values, and commitment to positive change in our community. Together, we can build a better Erdington.',
+  openGraph: {
+    title: 'About Reform UK Erdington',
+    description: 'Our mission is to bring positive change to Erdington through practical, common-sense solutions and community-focused leadership.',
+    images: [{ url: '/images/about-hero.jpg', width: 1200, height: 630, alt: 'About Reform UK Erdington' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Reform UK Erdington',
+    description: 'Our mission is to bring positive change to Erdington through practical, common-sense solutions and community-focused leadership.',
+    images: ['/images/about-hero.jpg'],
+  },
+}
 
 const AboutPage = () => {
   const content = getContent()
@@ -12,7 +29,7 @@ const AboutPage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 z-10" />
         <Image
           src={hero.image}
-          alt="About ReformUK Erdington"
+          alt="About Reform UK Erdington"
           fill
           className="absolute inset-0 object-cover"
           priority
@@ -36,8 +53,8 @@ const AboutPage = () => {
             <h2 className="text-4xl font-bold mb-6 text-reform-dark dark:text-white">{mission.title}</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">{mission.text}</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mission.points.map((point, index) => (
-                <div 
+              {mission.points.map((point: string, index: number) => (
+                <div
                   key={index}
                   className="bg-reform-gray dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all transform hover:-translate-y-1"
                 >
@@ -57,8 +74,8 @@ const AboutPage = () => {
             <p className="text-xl font-light">{values.text}</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {values.items.map((item, index) => (
-              <div 
+            {values.items.map((item: { title: string; description: string }, index: number) => (
+              <div
                 key={index}
                 className="bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all transform hover:-translate-y-1"
               >
@@ -79,14 +96,14 @@ const AboutPage = () => {
             Be part of the change in Erdington. Together, we can build a community that works for everyone.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
-              href="/join" 
+            <a
+              href="/join"
               className="btn bg-white text-reform-dark hover:bg-white/90 text-lg px-10 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all hover:shadow-lg"
             >
               Become a Member
             </a>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all"
             >
               Get in Touch

@@ -1,15 +1,24 @@
-"use client"
+'use client'
 
 import { useState } from 'react'
 
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  skills: string;
+  availability: string;
+}
+
 export default function VolunteerPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
     message: '',
     skills: '',
-    availability: ''
+    availability: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -36,7 +45,7 @@ export default function VolunteerPage() {
           phone: '',
           message: '',
           skills: '',
-          availability: ''
+          availability: '',
         })
       } else {
         setSubmitStatus('error')
@@ -52,7 +61,7 @@ export default function VolunteerPage() {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }))
   }
 
@@ -64,7 +73,7 @@ export default function VolunteerPage() {
           <div className="max-w-3xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Volunteer With Us</h1>
             <p className="text-lg md:text-xl text-white/90">
-              Join our team and help make a difference in Erdington
+              Join our team and help make a difference in Erdington.
             </p>
           </div>
         </div>
@@ -82,20 +91,20 @@ export default function VolunteerPage() {
 
               <h3 className="text-gray-900 dark:text-white">What You Can Do</h3>
               <ul className="text-gray-800 dark:text-gray-200">
-                <li>Help with local campaigns and events</li>
-                <li>Assist with social media and digital communications</li>
-                <li>Support administrative tasks and organization</li>
-                <li>Participate in community outreach programs</li>
-                <li>Contribute your unique skills and expertise</li>
+                <li>Help with local campaigns and events,</li>
+                <li>Assist with social media and digital communications,</li>
+                <li>Support administrative tasks and organisation,</li>
+                <li>Participate in community outreach programmes,</li>
+                <li>Contribute your unique skills and expertise.</li>
               </ul>
 
               <h3 className="text-gray-900 dark:text-white">Benefits of Volunteering</h3>
               <ul className="text-gray-800 dark:text-gray-200">
-                <li>Gain valuable experience in local politics</li>
-                <li>Meet like-minded people in your community</li>
-                <li>Make a real difference in Erdington</li>
-                <li>Learn new skills and develop existing ones</li>
-                <li>Be part of positive change in your area</li>
+                <li>Gain valuable experience in local politics,</li>
+                <li>Meet like-minded people in your community,</li>
+                <li>Make a real difference in Erdington,</li>
+                <li>Learn new skills and develop existing ones,</li>
+                <li>Be part of positive change in your area.</li>
               </ul>
             </div>
 

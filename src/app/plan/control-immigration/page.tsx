@@ -1,5 +1,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Control Immigration | Our Plan for Managed Migration in Erdington',
+  description: 'Reform UK Erdington\'s plan for controlled immigration, including reducing net migration, supporting legal residents, and ensuring sustainable community growth.',
+  openGraph: {
+    title: 'Control Immigration | Reform UK Erdington',
+    description: 'Our comprehensive plan for managed migration in Erdington, supporting our community while ensuring sustainable growth.',
+    images: [{ url: '/images/immigration-hero.jpg', width: 1200, height: 630, alt: 'Immigration Reform in Erdington' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Control Immigration | Reform UK Erdington',
+    description: 'Our comprehensive plan for managed migration in Erdington, supporting our community while ensuring sustainable growth.',
+    images: ['/images/immigration-hero.jpg'],
+  },
+}
 
 export default function ControlImmigrationPage() {
   return (
@@ -9,7 +26,7 @@ export default function ControlImmigrationPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 z-10" />
         <Image
           src="/images/immigration-hero.jpg"
-          alt="Immigration Reform"
+          alt="Immigration Reform in Erdington"
           fill
           className="absolute inset-0 object-cover"
           priority
@@ -20,7 +37,7 @@ export default function ControlImmigrationPage() {
               Control Immigration
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed">
-              Our commitment to achieving zero net migration and protecting local services.
+              Our plan for managed migration that works for Erdington and its residents.
             </p>
           </div>
         </div>
@@ -32,41 +49,41 @@ export default function ControlImmigrationPage() {
           <div className="max-w-4xl mx-auto">
             {/* Key Points */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our Immigration Control Plan</h2>
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our Immigration Plan</h2>
               <div className="grid gap-8">
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Zero Net Migration</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Managed Migration</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will implement a balanced migration policy where the number of people entering equals those leaving.
+                    We will implement a controlled immigration system that works for our community.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Strict control of immigration numbers</li>
-                    <li>Points-based system for skilled workers</li>
-                    <li>Protection of British jobs and wages</li>
+                    <li>Reduce net migration to sustainable levels,</li>
+                    <li>Support skilled workers who contribute to our economy,</li>
+                    <li>Ensure proper integration support.</li>
                   </ul>
                 </div>
 
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Border Control</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Community Support</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will take back control of our borders and end illegal immigration.
+                    We will ensure proper support for both existing residents and newcomers to our community.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Strengthen border security</li>
-                    <li>End illegal Channel crossings</li>
-                    <li>Swift removal of illegal immigrants</li>
+                    <li>Protect local services from excessive pressure,</li>
+                    <li>Support integration programmes,</li>
+                    <li>Maintain community cohesion.</li>
                   </ul>
                 </div>
 
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Protect Public Services</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Fair System</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will ensure our public services can meet local needs without excessive pressure.
+                    We will implement a fair system that works for everyone in our community.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Reduce pressure on NHS services</li>
-                    <li>Protect school places for local children</li>
-                    <li>Sustainable housing development</li>
+                    <li>Support legal residents and citizens,</li>
+                    <li>Ensure fair access to services,</li>
+                    <li>Maintain strong community relations.</li>
                   </ul>
                 </div>
               </div>
@@ -77,39 +94,37 @@ export default function ControlImmigrationPage() {
               <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Impact on Erdington</h2>
               <div className="bg-reform-primary/5 dark:bg-gray-800 p-8 rounded-xl">
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  Our immigration control plan will deliver real benefits for Erdington:
+                  Our immigration plan will deliver real benefits for Erdington:
                 </p>
                 <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-4">
-                  <li>Reduced pressure on local GP services</li>
-                  <li>More school places for local families</li>
-                  <li>Better availability of social housing</li>
-                  <li>Protection of local wages</li>
-                  <li>Sustainable community development</li>
+                  <li>Sustainable population growth,</li>
+                  <li>Protected local services,</li>
+                  <li>Strong community integration,</li>
+                  <li>Fair access to opportunities,</li>
+                  <li>Enhanced community cohesion.</li>
                 </ul>
               </div>
             </div>
 
             {/* Call to Action */}
             <div className="bg-reform-primary text-white p-8 rounded-xl text-center">
-              <h2 className="text-3xl font-bold mb-4">Support Our Immigration Control Plan</h2>
+              <h2 className="text-3xl font-bold mb-4">Support Our Immigration Plan</h2>
               <p className="text-lg mb-8">
-                Join us in building a sustainable future for Erdington with controlled immigration and protected public services.
+                Join us in building a fair and sustainable immigration system that works for everyone in Erdington.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                   href="/join"
-                  className="bg-white text-reform-primary px-8 py-4 rounded-lg font-semibold hover:bg-reform-light hover:text-white transition-colors duration-200"
+                  className="btn bg-white text-reform-primary hover:bg-white/90 text-lg px-8 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all hover:shadow-lg"
                 >
-                  Join Reform UK
+                  Join Us Today
                 </Link>
-                <a
-                  href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-reform-primary transition-colors duration-200"
+                <Link
+                  href="/volunteer"
+                  className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all"
                 >
-                  Read Our Contract
-                </a>
+                  Volunteer
+                </Link>
               </div>
             </div>
           </div>

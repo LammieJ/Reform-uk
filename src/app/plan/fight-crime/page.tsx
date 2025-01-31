@@ -1,5 +1,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Fight Crime | Our Plan for a Safer Erdington',
+  description: 'Reform UK Erdington\'s plan to fight crime, including increased police presence, tackling anti-social behaviour, and creating safer neighbourhoods for our community.',
+  openGraph: {
+    title: 'Fight Crime | Reform UK Erdington',
+    description: 'Our comprehensive plan to tackle crime in Erdington, improve community safety, and create safer neighbourhoods for everyone.',
+    images: [{ url: '/images/crime-hero.jpg', width: 1200, height: 630, alt: 'Crime Prevention in Erdington' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fight Crime | Reform UK Erdington',
+    description: 'Our comprehensive plan to tackle crime in Erdington, improve community safety, and create safer neighbourhoods for everyone.',
+    images: ['/images/crime-hero.jpg'],
+  },
+}
 
 export default function FightCrimePage() {
   return (
@@ -9,7 +26,7 @@ export default function FightCrimePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 z-10" />
         <Image
           src="/images/crime-hero.jpg"
-          alt="Fighting Crime"
+          alt="Crime Prevention in Erdington"
           fill
           className="absolute inset-0 object-cover"
           priority
@@ -20,7 +37,7 @@ export default function FightCrimePage() {
               Fight Crime
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed">
-              Our plan to make Erdington safer with tougher policing and stronger sentences.
+              Our commitment to making Erdington safer for everyone.
             </p>
           </div>
         </div>
@@ -32,41 +49,41 @@ export default function FightCrimePage() {
           <div className="max-w-4xl mx-auto">
             {/* Key Points */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our Crime Fighting Plan</h2>
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our Crime Prevention Plan</h2>
               <div className="grid gap-8">
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">More Police on Streets</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Police Presence</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will increase visible policing and ensure officers spend more time on the beat.
+                    We will increase visible policing in Erdington to deter crime and make our streets safer.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Increased police presence in Erdington</li>
-                    <li>Focus on neighborhood policing</li>
-                    <li>Rapid response to emergencies</li>
+                    <li>More police officers on patrol,</li>
+                    <li>Increased community policing,</li>
+                    <li>Faster response times to incidents.</li>
                   </ul>
                 </div>
 
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Tougher Sentences</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Anti-social Behaviour</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will ensure criminals face proper punishment and victims see justice done.
+                    We will tackle anti-social behaviour and make our neighbourhoods more pleasant places to live.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Mandatory minimum sentences</li>
-                    <li>End early release for violent offenders</li>
-                    <li>Better support for victims</li>
+                    <li>Zero tolerance for anti-social behaviour,</li>
+                    <li>Support for youth programmes,</li>
+                    <li>Better street lighting and CCTV coverage.</li>
                   </ul>
                 </div>
 
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
                   <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Community Safety</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will work with communities to prevent crime and make neighborhoods safer.
+                    We will work with the community to create safer neighbourhoods for everyone.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Expand CCTV coverage</li>
-                    <li>Better street lighting</li>
-                    <li>Support neighborhood watch schemes</li>
+                    <li>Support for Neighbourhood Watch schemes,</li>
+                    <li>Better reporting systems for crime,</li>
+                    <li>Community engagement programmes.</li>
                   </ul>
                 </div>
               </div>
@@ -77,39 +94,37 @@ export default function FightCrimePage() {
               <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Impact on Erdington</h2>
               <div className="bg-reform-primary/5 dark:bg-gray-800 p-8 rounded-xl">
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  Our crime fighting plan will deliver real improvements for Erdington:
+                  Our crime prevention plan will deliver real benefits for Erdington:
                 </p>
                 <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-4">
-                  <li>Safer streets and public spaces</li>
-                  <li>Reduced anti-social behavior</li>
-                  <li>Better protection for local businesses</li>
-                  <li>Faster police response times</li>
-                  <li>Stronger community partnerships</li>
+                  <li>Safer streets and neighbourhoods,</li>
+                  <li>Reduced anti-social behaviour,</li>
+                  <li>Better community relations,</li>
+                  <li>More effective policing,</li>
+                  <li>Improved quality of life.</li>
                 </ul>
               </div>
             </div>
 
             {/* Call to Action */}
             <div className="bg-reform-primary text-white p-8 rounded-xl text-center">
-              <h2 className="text-3xl font-bold mb-4">Support Our Crime Fighting Plan</h2>
+              <h2 className="text-3xl font-bold mb-4">Support Our Crime Prevention Plan</h2>
               <p className="text-lg mb-8">
-                Join us in making Erdington safer for everyone with tougher policing and stronger justice.
+                Join us in making Erdington safer for everyone. Together, we can create a community where people feel secure.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                   href="/join"
-                  className="bg-white text-reform-primary px-8 py-4 rounded-lg font-semibold hover:bg-reform-light hover:text-white transition-colors duration-200"
+                  className="btn bg-white text-reform-primary hover:bg-white/90 text-lg px-8 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all hover:shadow-lg"
                 >
-                  Join Reform UK
+                  Join Us Today
                 </Link>
-                <a
-                  href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-reform-primary transition-colors duration-200"
+                <Link
+                  href="/volunteer"
+                  className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all"
                 >
-                  Read Our Contract
-                </a>
+                  Volunteer
+                </Link>
               </div>
             </div>
           </div>

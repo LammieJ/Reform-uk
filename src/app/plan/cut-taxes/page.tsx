@@ -1,5 +1,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Cut Taxes | Our Plan for Lower Taxes in Erdington',
+  description: 'Reform UK Erdington\'s plan to cut taxes, including 50% business rates reduction, lower income tax, and reduced corporation tax to help local families and businesses thrive.',
+  openGraph: {
+    title: 'Cut Taxes | Reform UK Erdington',
+    description: 'Our comprehensive plan to reduce taxes in Erdington, boost local businesses, and help families keep more of their money.',
+    images: [{ url: '/images/taxes-hero.jpg', width: 1200, height: 630, alt: 'Tax Reform in Erdington' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cut Taxes | Reform UK Erdington',
+    description: 'Our comprehensive plan to reduce taxes in Erdington, boost local businesses, and help families keep more of their money.',
+    images: ['/images/taxes-hero.jpg'],
+  },
+}
 
 export default function CutTaxesPage() {
   return (
@@ -9,7 +26,7 @@ export default function CutTaxesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 z-10" />
         <Image
           src="/images/taxes-hero.jpg"
-          alt="Tax Reform"
+          alt="Tax Reform in Erdington"
           fill
           className="absolute inset-0 object-cover"
           priority
@@ -32,17 +49,17 @@ export default function CutTaxesPage() {
           <div className="max-w-4xl mx-auto">
             {/* Key Points */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Our Tax Cutting Plan</h2>
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our Tax-Cutting Plan</h2>
               <div className="grid gap-8">
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
                   <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Business Rates</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will cut business rates by 50% to help local businesses thrive and revitalize Erdington High Street.
+                    We will cut business rates by 50% to help local businesses thrive and revitalise Erdington High Street.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Immediate 50% reduction in business rates</li>
-                    <li>Support for small and medium businesses</li>
-                    <li>Boost local enterprise and job creation</li>
+                    <li>Immediate 50% reduction in business rates,</li>
+                    <li>Support for small and medium-sized businesses,</li>
+                    <li>Boost local enterprise and job creation.</li>
                   </ul>
                 </div>
 
@@ -52,9 +69,9 @@ export default function CutTaxesPage() {
                     We will raise the personal allowance and reduce income tax rates to help working families keep more of their money.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Increase personal allowance</li>
-                    <li>Lower basic rate of income tax</li>
-                    <li>Support for working families</li>
+                    <li>Increase personal allowance,</li>
+                    <li>Lower basic rate of income tax,</li>
+                    <li>Support for working families.</li>
                   </ul>
                 </div>
 
@@ -64,9 +81,9 @@ export default function CutTaxesPage() {
                     We will reduce corporation tax to attract investment and create jobs in Erdington.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Lower corporation tax rates</li>
-                    <li>Encourage business investment</li>
-                    <li>Create local job opportunities</li>
+                    <li>Lower corporation tax rates,</li>
+                    <li>Encourage business investment,</li>
+                    <li>Create local job opportunities.</li>
                   </ul>
                 </div>
               </div>
@@ -77,39 +94,37 @@ export default function CutTaxesPage() {
               <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Impact on Erdington</h2>
               <div className="bg-reform-primary/5 dark:bg-gray-800 p-8 rounded-xl">
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  Our tax cutting plan will deliver real benefits for Erdington:
+                  Our tax-cutting plan will deliver real benefits for Erdington:
                 </p>
                 <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-4">
-                  <li>More local jobs and opportunities</li>
-                  <li>Thriving high street businesses</li>
-                  <li>Increased investment in local area</li>
-                  <li>Better paid employment</li>
-                  <li>Stronger local economy</li>
+                  <li>More local jobs and opportunities,</li>
+                  <li>Thriving high street businesses,</li>
+                  <li>Increased investment in the local area,</li>
+                  <li>Better-paid employment,</li>
+                  <li>Stronger local economy.</li>
                 </ul>
               </div>
             </div>
 
             {/* Call to Action */}
             <div className="bg-reform-primary text-white p-8 rounded-xl text-center">
-              <h2 className="text-3xl font-bold mb-4">Support Our Tax Cutting Plan</h2>
+              <h2 className="text-3xl font-bold mb-4">Support Our Tax-Cutting Plan</h2>
               <p className="text-lg mb-8">
                 Join us in building a more prosperous Erdington with lower taxes and more opportunities for all.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                   href="/join"
-                  className="bg-white text-reform-primary px-8 py-4 rounded-lg font-semibold hover:bg-reform-light hover:text-white transition-colors duration-200"
+                  className="btn bg-white text-reform-primary hover:bg-white/90 text-lg px-8 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all hover:shadow-lg"
                 >
-                  Join Reform UK
+                  Join Us Today
                 </Link>
-                <a
-                  href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-reform-primary transition-colors duration-200"
+                <Link
+                  href="/volunteer"
+                  className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all"
                 >
-                  Read Our Contract
-                </a>
+                  Volunteer
+                </Link>
               </div>
             </div>
           </div>

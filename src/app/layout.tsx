@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/context/ThemeContext'
+import { Metadata } from 'next'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -26,7 +27,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en-GB" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={`${roboto.variable} ${montserrat.variable}`}>
         <ThemeProvider>
           <div className="min-h-screen bg-white dark:bg-gray-900 text-reform-dark dark:text-white">
@@ -35,9 +39,9 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
-            <Analytics />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )

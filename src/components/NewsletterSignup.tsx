@@ -38,7 +38,7 @@ export default function NewsletterSignup() {
     <div className="text-center">
       <h2 className="text-3xl font-bold mb-4 text-reform-dark dark:text-white">Stay Updated</h2>
       <p className="text-gray-600 dark:text-gray-300 mb-8">
-        Subscribe to our newsletter for updates on our campaign and local events.
+        Subscribe to our newsletter for updates on our campaign and local events across Erdington, Castle Vale, Pype Hayes, Stockland Green, and Kingstanding.
       </p>
 
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -50,6 +50,7 @@ export default function NewsletterSignup() {
             placeholder="Enter your email"
             required
             className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-reform-primary dark:focus:ring-reform-light"
+            aria-label="Email address for newsletter subscription"
           />
           <button
             type="submit"
@@ -60,7 +61,10 @@ export default function NewsletterSignup() {
           </button>
         </div>
         {message && (
-          <p className={`mt-4 ${status === 'success' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
+          <p 
+            className={`mt-4 ${status === 'success' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}
+            role="alert"
+          >
             {message}
           </p>
         )}

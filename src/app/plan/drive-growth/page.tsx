@@ -1,5 +1,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Drive Growth | Our Plan for Economic Growth in Erdington',
+  description: 'Reform UK Erdington\'s plan to drive economic growth, including supporting local businesses, attracting investment, and creating jobs in our community.',
+  openGraph: {
+    title: 'Drive Growth | Reform UK Erdington',
+    description: 'Our comprehensive plan to boost economic growth in Erdington, support local businesses, and create more job opportunities.',
+    images: [{ url: '/images/growth-hero.jpg', width: 1200, height: 630, alt: 'Economic Growth in Erdington' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Drive Growth | Reform UK Erdington',
+    description: 'Our comprehensive plan to boost economic growth in Erdington, support local businesses, and create more job opportunities.',
+    images: ['/images/growth-hero.jpg'],
+  },
+}
 
 export default function DriveGrowthPage() {
   return (
@@ -9,7 +26,7 @@ export default function DriveGrowthPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 z-10" />
         <Image
           src="/images/growth-hero.jpg"
-          alt="Economic Growth"
+          alt="Economic Growth in Erdington"
           fill
           className="absolute inset-0 object-cover"
           priority
@@ -20,7 +37,7 @@ export default function DriveGrowthPage() {
               Drive Growth
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed">
-              Our plan to boost economic growth through deregulation and business support.
+              Our plan to boost economic growth and create opportunities in Erdington.
             </p>
           </div>
         </div>
@@ -35,38 +52,38 @@ export default function DriveGrowthPage() {
               <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our Growth Plan</h2>
               <div className="grid gap-8">
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Cut Red Tape</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Local Business Support</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will slash bureaucracy and make it easier to do business in Erdington.
+                    We will support local businesses to thrive and create jobs in our community.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Simplify business regulations</li>
-                    <li>Speed up planning processes</li>
-                    <li>Reduce paperwork burden</li>
+                    <li>Reduced business rates and regulations,</li>
+                    <li>Support for start-ups and entrepreneurs,</li>
+                    <li>Improved local business infrastructure.</li>
                   </ul>
                 </div>
 
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Support Local Business</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Investment Attraction</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will create the conditions for local businesses to thrive and expand.
+                    We will attract new investment to create jobs and opportunities in Erdington.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Reduce business rates by 50%</li>
-                    <li>Support for startups and entrepreneurs</li>
-                    <li>Improve access to finance</li>
+                    <li>Promote Erdington to investors,</li>
+                    <li>Streamline planning processes,</li>
+                    <li>Support business development.</li>
                   </ul>
                 </div>
 
                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Attract Investment</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Skills and Training</h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    We will make Erdington a magnet for new business and investment.
+                    We will help local people gain the skills needed for better jobs.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>Create enterprise zones</li>
-                    <li>Improve local infrastructure</li>
-                    <li>Develop skilled workforce</li>
+                    <li>Support for vocational training,</li>
+                    <li>Partnerships with local employers,</li>
+                    <li>Apprenticeship programmes.</li>
                   </ul>
                 </div>
               </div>
@@ -80,11 +97,11 @@ export default function DriveGrowthPage() {
                   Our growth plan will deliver real benefits for Erdington:
                 </p>
                 <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-4">
-                  <li>More local jobs and opportunities</li>
-                  <li>Thriving high street businesses</li>
-                  <li>Increased investment in local area</li>
-                  <li>Better paid employment</li>
-                  <li>Stronger local economy</li>
+                  <li>More local jobs and opportunities,</li>
+                  <li>Thriving local businesses,</li>
+                  <li>Better skills and training,</li>
+                  <li>Increased investment,</li>
+                  <li>Stronger local economy.</li>
                 </ul>
               </div>
             </div>
@@ -93,23 +110,21 @@ export default function DriveGrowthPage() {
             <div className="bg-reform-primary text-white p-8 rounded-xl text-center">
               <h2 className="text-3xl font-bold mb-4">Support Our Growth Plan</h2>
               <p className="text-lg mb-8">
-                Join us in building a more prosperous Erdington with more jobs and opportunities.
+                Join us in building a more prosperous Erdington with better opportunities for everyone.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                   href="/join"
-                  className="bg-white text-reform-primary px-8 py-4 rounded-lg font-semibold hover:bg-reform-light hover:text-white transition-colors duration-200"
+                  className="btn bg-white text-reform-primary hover:bg-white/90 text-lg px-8 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all hover:shadow-lg"
                 >
-                  Join Reform UK
+                  Join Us Today
                 </Link>
-                <a
-                  href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-reform-primary transition-colors duration-200"
+                <Link
+                  href="/volunteer"
+                  className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all"
                 >
-                  Read Our Contract
-                </a>
+                  Volunteer
+                </Link>
               </div>
             </div>
           </div>

@@ -1,10 +1,27 @@
 import { getContent } from '@/utils/content'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import type { Metadata } from 'next'
 
 const EventsClient = dynamic(() => import('@/components/EventsClient'), {
-  ssr: false
+  ssr: false,
 })
+
+export const metadata: Metadata = {
+  title: 'Events | Reform UK Erdington',
+  description: 'Join Reform UK Erdington at our local events. Get involved in our community activities, political discussions, and help shape the future of Erdington.',
+  openGraph: {
+    title: 'Events | Reform UK Erdington',
+    description: 'Join us at our local events and help shape the future of Erdington. Find out about upcoming meetings, community activities, and political discussions.',
+    images: [{ url: '/images/events-hero.jpg', width: 1200, height: 630, alt: 'Reform UK Erdington Events' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Events | Reform UK Erdington',
+    description: 'Join us at our local events and help shape the future of Erdington. Find out about upcoming meetings, community activities, and political discussions.',
+    images: ['/images/events-hero.jpg'],
+  },
+}
 
 export default function EventsPage() {
   const content = getContent()
@@ -17,7 +34,7 @@ export default function EventsPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 z-10" />
         <Image
           src="/images/events-hero.jpg"
-          alt="ReformUK Erdington Events"
+          alt="Reform UK Erdington Events"
           fill
           className="absolute inset-0 object-cover"
           priority

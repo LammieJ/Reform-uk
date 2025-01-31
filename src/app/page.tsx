@@ -2,6 +2,23 @@ import Image from 'next/image'
 import { getContent } from '@/utils/content'
 import NewsletterSignup from '@/components/NewsletterSignup'
 import SocialFeed from '@/components/SocialFeed'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Reform UK Erdington Branch | Your Local Voice for Change',
+  description: 'Join Reform UK Erdington Branch in our mission to cut taxes, protect the NHS, control immigration, and bring positive change to Erdington, Castle Vale, Pype Hayes, Stockland Green, and Kingstanding.',
+  openGraph: {
+    title: 'Reform UK Erdington Branch | Your Local Voice for Change',
+    description: 'Join us in making real change across Erdington, Castle Vale, Pype Hayes, Stockland Green, and Kingstanding. Together, we can build stronger, more prosperous communities.',
+    images: [{ url: '/images/hero.jpg', width: 1200, height: 630, alt: 'Reform UK Erdington Branch' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Reform UK Erdington Branch | Your Local Voice for Change',
+    description: 'Join us in making real change across Erdington, Castle Vale, Pype Hayes, Stockland Green, and Kingstanding. Together, we can build stronger, more prosperous communities.',
+    images: ['/images/hero.jpg'],
+  },
+}
 
 export default function Home() {
   const content = getContent()
@@ -14,7 +31,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 dark:from-black/90 dark:to-reform-dark/70 z-10" />
         <Image
           src={hero.image}
-          alt="Erdington High Street"
+          alt="Reform UK Erdington Branch"
           fill
           className="absolute inset-0 object-cover"
           priority
@@ -22,23 +39,23 @@ export default function Home() {
         <div className="relative z-20 container mx-auto px-4 py-20">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              Reform Erdington
+              Reform UK Erdington Branch
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-6">
-              Join us in making real change in Erdington, Castle Vale, Pype Hayes, Stockland Green and Kingstanding
+              Join us in making real change across Erdington, Castle Vale, Pype Hayes, Stockland Green, and Kingstanding.
             </p>
             <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-12">
-              We're committed to cutting taxes, reducing net migration to zero, protecting our NHS, and bringing common sense back to local governance. Together, we can build a stronger, more prosperous community where your voice matters and your vote counts.
+              We're committed to cutting taxes, reducing net migration to zero, protecting our NHS, and bringing common sense back to local governance. Together, we can build stronger, more prosperous communities where your voice matters and your vote counts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="/join" 
+              <a
+                href="/join"
                 className="btn bg-white text-reform-primary dark:bg-reform-dark dark:text-white hover:bg-white/90 dark:hover:bg-reform-dark/90 text-lg px-8 py-4 rounded-lg font-semibold transition-all transform hover:-translate-y-1 hover:shadow-lg"
               >
                 Join Us Today
               </a>
-              <a 
-                href="#priorities" 
+              <a
+                href="#priorities"
                 className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 rounded-lg font-semibold transition-all transform hover:-translate-y-1"
               >
                 Our Priorities
@@ -76,13 +93,13 @@ export default function Home() {
             <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-transform">
               <Image
                 src={about.image}
-                alt="Reform vision for Erdington"
+                alt="Reform UK Erdington Branch vision"
                 fill
                 className="object-cover"
               />
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-6 dark:text-white">Our Vision for Erdington</h2>
+              <h2 className="text-4xl font-bold mb-6 dark:text-white">Our Vision for Our Communities</h2>
               <div className="prose prose-lg dark:prose-invert">
                 {about.text.split('\n\n').map((paragraph: string, index: number) => (
                   <p key={index} className="mb-6 text-gray-600 dark:text-gray-300">
@@ -90,8 +107,8 @@ export default function Home() {
                   </p>
                 ))}
               </div>
-              <a 
-                href="/about" 
+              <a
+                href="/about"
                 className="inline-flex items-center text-reform-primary dark:text-reform-light hover:text-reform-primary/80 dark:hover:text-reform-light/80 font-semibold group"
               >
                 Learn More
@@ -125,17 +142,17 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-5xl font-bold mb-6">Join the Reform Movement</h2>
           <p className="text-xl mb-12 max-w-2xl mx-auto font-light">
-            Together, we can build a better future for Erdington. Join us in our mission to bring positive change to our community.
+            Together, we can build a better future for Erdington, Castle Vale, Pype Hayes, Stockland Green, and Kingstanding. Join us in our mission to bring positive change to our communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
-              href="/join" 
+            <a
+              href="/join"
               className="btn bg-white text-reform-dark dark:bg-reform-dark dark:text-white hover:bg-white/90 dark:hover:bg-reform-dark/90 text-lg px-10 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all hover:shadow-lg"
             >
               Become a Member
             </a>
-            <a 
-              href="/volunteer" 
+            <a
+              href="/volunteer"
               className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-4 rounded-lg font-semibold transform hover:-translate-y-1 transition-all"
             >
               Volunteer

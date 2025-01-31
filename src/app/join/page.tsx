@@ -1,34 +1,81 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Join Us | Reform UK Erdington',
+  description: 'Join Reform UK Erdington and help us create positive change in our community. Choose from various membership options and be part of our mission to reform the United Kingdom.',
+  openGraph: {
+    title: 'Join Reform UK Erdington',
+    description: 'Join our movement and help us create positive change. Choose from various membership options and be part of our mission to reform the United Kingdom.',
+    images: [{ url: '/images/hero.jpg', width: 1200, height: 630, alt: 'Join Reform UK Erdington' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Join Reform UK Erdington',
+    description: 'Join our movement and help us create positive change. Choose from various membership options and be part of our mission to reform the United Kingdom.',
+    images: ['/images/hero.jpg'],
+  },
+}
+
+interface MembershipType {
+  title: string;
+  description: string;
+  benefits: string[];
+  url: string;
+  bgColor: string;
+  isLocal?: boolean;
+}
+
 export default function JoinPage() {
-  const membershipTypes = [
+  const membershipTypes: MembershipType[] = [
     {
       title: "Member",
       description: "Full membership with voting rights and exclusive benefits",
-      benefits: ["Voting rights", "Members-only events", "Policy input", "Regular newsletters"],
+      benefits: [
+        "Voting rights",
+        "Members-only events",
+        "Policy input",
+        "Regular newsletters",
+      ],
       url: "https://www.reformparty.uk/join_member",
-      bgColor: "bg-reform-primary"
+      bgColor: "bg-reform-primary",
     },
     {
       title: "Under 25",
       description: "Special membership for young reformers",
-      benefits: ["All member benefits", "Youth events", "Network with young reformers", "Shape the future"],
+      benefits: [
+        "All member benefits",
+        "Youth events",
+        "Network with young reformers",
+        "Shape the future",
+      ],
       url: "https://www.reformparty.uk/join_young_member",
-      bgColor: "bg-reform-secondary"
+      bgColor: "bg-reform-secondary",
     },
     {
       title: "Supporter",
       description: "Show your support for Reform UK",
-      benefits: ["Support our campaigns", "Stay informed", "Local event invitations", "Make a difference"],
+      benefits: [
+        "Support our campaigns",
+        "Stay informed",
+        "Local event invitations",
+        "Make a difference",
+      ],
       url: "https://www.reformparty.uk/donate-1",
-      bgColor: "bg-reform-dark"
+      bgColor: "bg-reform-dark",
     },
     {
       title: "Volunteer",
       description: "Get involved in your local community",
-      benefits: ["Help with campaigns", "Join local events", "Make connections", "Share your skills"],
+      benefits: [
+        "Help with campaigns",
+        "Join local events",
+        "Make connections",
+        "Share your skills",
+      ],
       url: "/volunteer",
       bgColor: "bg-reform-secondary",
-      isLocal: true
-    }
+      isLocal: true,
+    },
   ]
 
   return (
@@ -39,7 +86,7 @@ export default function JoinPage() {
           <div className="max-w-3xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Join Reform UK</h1>
             <p className="text-lg md:text-xl text-white/90">
-              Choose how you want to support Reform UK and help us reform Britain
+              Choose how you want to support Reform UK and help us reform the United Kingdom.
             </p>
           </div>
         </div>
@@ -49,7 +96,7 @@ export default function JoinPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {membershipTypes.map((type, index) => (
+            {membershipTypes.map((type: MembershipType, index: number) => (
               <a
                 key={index}
                 href={type.url}
@@ -62,7 +109,7 @@ export default function JoinPage() {
                     <h3 className="text-2xl font-bold mb-3">{type.title}</h3>
                     <p className="text-white/90 mb-4">{type.description}</p>
                     <ul className="space-y-2 mb-6">
-                      {type.benefits.map((benefit, i) => (
+                      {type.benefits.map((benefit: string, i: number) => (
                         <li key={i} className="flex items-center text-white/90">
                           <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -91,7 +138,7 @@ export default function JoinPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-reform-dark dark:text-white">Make a Difference</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Join Reform UK today and help us build a better Britain. Your support will help us campaign for real change.
+              Join Reform UK today and help us build a better United Kingdom. Your support will help us campaign for real change.
             </p>
             <a
               href="https://www.reformparty.uk/join_member"

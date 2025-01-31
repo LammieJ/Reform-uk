@@ -7,32 +7,40 @@ type ThemeContextType = {
   toggleDarkMode: () => void
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+const ThemeContext = createContext<ThemeContextType>({
+  isDarkMode: false,
+  toggleDarkMode: () => {},
+})
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [mounted, setMounted] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
-    // Check local storage or system preference on mount
-    const storedTheme = localStorage.getItem('theme')
+    setMounted(true)
+    const storedTheme = window.localStorage.getItem('theme')
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
     setIsDarkMode(storedTheme === 'dark' || (!storedTheme && systemPrefersDark))
   }, [])
 
   useEffect(() => {
-    // Update document class and local storage when theme changes
+    if (!mounted) return
+
     if (isDarkMode) {
       document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
+      window.localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
+      window.localStorage.setItem('theme', 'light')
     }
-  }, [isDarkMode])
+  }, [isDarkMode, mounted])
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode)
+  }
+
+  if (!mounted) {
+    return null
   }
 
   return (
@@ -44,8 +52,5 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext)
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider')
-  }
   return context
 }

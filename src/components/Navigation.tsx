@@ -6,7 +6,6 @@ import { useTheme } from '@/context/ThemeContext'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const { isDarkMode, toggleDarkMode } = useTheme()
 
   const menuItems = [
@@ -47,16 +46,13 @@ export default function Navigation() {
           <nav className="hidden lg:flex lg:items-center lg:gap-6">
             {menuItems.map((item) => 
               item.subItems ? (
-                <div key={item.href} className="relative">
+                <div key={item.href} className="relative group">
                   <button 
                     className="text-white text-sm font-medium flex items-center gap-1 hover:bg-white/10 transition-colors duration-200 px-3 py-2 rounded-md"
-                    onClick={() => setOpenDropdown(openDropdown === item.href ? null : item.href)}
                   >
                     {item.label}
                     <svg 
-                      className={`w-4 h-4 transform transition-transform duration-200 ${
-                        openDropdown === item.href ? 'rotate-180' : ''
-                      }`}
+                      className="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180"
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24"
@@ -65,16 +61,17 @@ export default function Navigation() {
                     </svg>
                   </button>
                   <div 
-                    className={`absolute left-0 mt-1 w-48 bg-reform-primary dark:bg-gray-800 rounded shadow-lg py-1 transform transition-all duration-200 ${
-                      openDropdown === item.href ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-                    }`}
+                    className="absolute left-0 mt-1 w-48 bg-reform-primary dark:bg-gray-800 rounded-lg shadow-lg py-1 transform transition-all duration-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 -translate-y-2"
                     style={{ zIndex: 50 }}
                   >
-                    {item.subItems.map((subItem) => (
+                    {item.subItems.map((subItem, index) => (
                       <Link
                         key={subItem.href}
                         href={subItem.href}
-                        className="block px-4 py-2 text-white hover:bg-white/10 dark:hover:bg-reform-primary/20 transition-colors duration-200"
+                        className={`block px-4 py-2 text-white hover:bg-white/10 dark:hover:bg-reform-primary/20 transition-colors duration-200 ${
+                          index === 0 ? 'rounded-t-lg' : 
+                          index === item.subItems.length - 1 ? 'rounded-b-lg' : ''
+                        }`}
                       >
                         {subItem.label}
                       </Link>
