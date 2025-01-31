@@ -6,6 +6,11 @@ const nextConfig = {
   },
   swcMinify: true,
   poweredByHeader: false,
+  experimental: {
+    optimizePackageImports: ['@heroicons/react'],
+    optimizeCss: true,
+    memoryBasedWorkersCount: true,
+  },
 }
 
 module.exports = nextConfig
