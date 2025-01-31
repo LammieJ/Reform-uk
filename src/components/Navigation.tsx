@@ -39,9 +39,6 @@ export default function Navigation() {
             <Link href="/about" className="text-reform-dark dark:text-white hover:text-reform-primary dark:hover:text-reform-light font-medium">
               About
             </Link>
-            <Link href="/news" className="text-reform-dark dark:text-white hover:text-reform-primary dark:hover:text-reform-light font-medium">
-              News
-            </Link>
             <Link href="/events" className="text-reform-dark dark:text-white hover:text-reform-primary dark:hover:text-reform-light font-medium">
               Events
             </Link>
@@ -178,13 +175,6 @@ export default function Navigation() {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
-          </Link>
-          <Link
-            href="/news"
-            className="block text-reform-dark dark:text-white hover:bg-reform-gray dark:hover:bg-reform-secondary px-4 py-2 text-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            News
           </Link>
           <Link
             href="/events"
