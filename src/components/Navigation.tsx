@@ -30,11 +30,8 @@ export default function Navigation() {
     <header className="bg-reform-primary shadow-sm">
       <div className="container mx-auto max-w-7xl px-4">
         {/* Top bar */}
-        <div className="text-center py-4 border-b border-white/20">
-          <div className="container mx-auto max-w-4xl px-4">
-            <div className="text-white/90 font-medium">Join us in making real change in Erdington, Castle Vale, Pype Hayes, Stockland Green and Kingstanding</div>
-            <div className="mt-2 text-sm text-white/80 leading-relaxed">We're committed to cutting taxes, reducing net migration to zero, protecting our NHS, and bringing common sense back to local governance. Together, we can build a stronger, more prosperous community where your voice matters and your vote counts.</div>
-          </div>
+        <div className="text-center py-2 text-sm text-white/90 border-b border-white/20">
+          Castle Vale • Pype Hayes • Stockland Green • Kingstanding
         </div>
 
         {/* Main navigation */}
