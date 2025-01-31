@@ -3,6 +3,7 @@ import { getContent } from '@/utils/content'
 import NewsletterSignup from '@/components/NewsletterSignup'
 import SocialFeed from '@/components/SocialFeed'
 import type { Metadata } from 'next'
+import { FaFacebook } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'Reform UK Erdington Branch | Your Local Voice for Change',
@@ -50,15 +51,29 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="/join"
-                className="btn bg-white text-reform-primary dark:bg-reform-dark dark:text-white hover:bg-white/90 dark:hover:bg-reform-dark/90 text-lg px-8 py-4 rounded-lg font-semibold transition-all transform hover:-translate-y-1 hover:shadow-lg"
+                className="btn bg-white text-reform-primary dark:bg-reform-dark dark:text-white hover:bg-reform-light dark:hover:bg-reform-secondary text-lg px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:scale-105 relative overflow-hidden group"
               >
-                Join Us Today
+                <span className="relative z-10">Join Us Today</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 dark:from-reform-dark/0 dark:via-reform-dark/30 dark:to-reform-dark/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               </a>
               <a
                 href="#priorities"
-                className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 rounded-lg font-semibold transition-all transform hover:-translate-y-1"
+                className="btn border-2 border-white text-white hover:border-reform-light hover:text-reform-light text-lg px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:scale-105 relative overflow-hidden group"
               >
-                Our Priorities
+                <span className="relative z-10">Our Priorities</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              </a>
+              <a
+                href="https://www.facebook.com/groups/916932353577131"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn border-2 border-white text-white hover:border-reform-light hover:text-reform-light text-lg px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:scale-105 relative overflow-hidden group"
+              >
+                <span className="relative z-10 flex items-center">
+                  <FaFacebook className="mr-2 h-5 w-5" />
+                  Facebook Group
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               </a>
             </div>
           </div>
