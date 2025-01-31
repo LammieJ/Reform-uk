@@ -1,0 +1,120 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+export default function CutTaxesPage() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="relative min-h-[60vh] flex items-center justify-center text-white">
+        <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 z-10" />
+        <Image
+          src="/images/taxes-hero.jpg"
+          alt="Tax Reform"
+          fill
+          className="absolute inset-0 object-cover"
+          priority
+        />
+        <div className="relative z-20 container mx-auto px-4 py-20">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+              Cut Taxes
+            </h1>
+            <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed">
+              Our commitment to reducing the tax burden on families and businesses in Erdington.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Key Points */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8">Our Tax Cutting Plan</h2>
+              <div className="grid gap-8">
+                <div className="bg-gray-50 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4">Business Rates</h3>
+                  <p className="text-lg text-gray-700 mb-4">
+                    We will cut business rates by 50% to help local businesses thrive and revitalize Erdington High Street.
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Immediate 50% reduction in business rates</li>
+                    <li>Support for small and medium businesses</li>
+                    <li>Boost local enterprise and job creation</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4">Income Tax</h3>
+                  <p className="text-lg text-gray-700 mb-4">
+                    We will raise the personal allowance and reduce income tax rates to help working families keep more of their money.
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Increase personal allowance</li>
+                    <li>Lower basic rate of income tax</li>
+                    <li>Support for working families</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4">Corporation Tax</h3>
+                  <p className="text-lg text-gray-700 mb-4">
+                    We will reduce corporation tax to attract investment and create jobs in Erdington.
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Lower corporation tax rates</li>
+                    <li>Encourage business investment</li>
+                    <li>Create local job opportunities</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Local Impact */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8">Impact on Erdington</h2>
+              <div className="bg-reform-primary/5 p-8 rounded-xl">
+                <p className="text-lg text-gray-700 mb-6">
+                  Our tax cutting plan will deliver real benefits for Erdington:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-4">
+                  <li>More local jobs and opportunities</li>
+                  <li>Thriving high street businesses</li>
+                  <li>Increased investment in local area</li>
+                  <li>Better paid employment</li>
+                  <li>Stronger local economy</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="bg-reform-primary text-white p-8 rounded-xl text-center">
+              <h2 className="text-3xl font-bold mb-4">Support Our Tax Cutting Plan</h2>
+              <p className="text-lg mb-8">
+                Join us in building a more prosperous Erdington with lower taxes and more opportunities for all.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link
+                  href="/join"
+                  className="bg-white text-reform-primary px-8 py-4 rounded-lg font-semibold hover:bg-reform-light hover:text-white transition-colors duration-200"
+                >
+                  Join Reform UK
+                </Link>
+                <a
+                  href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-reform-primary transition-colors duration-200"
+                >
+                  Read Our Contract
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
