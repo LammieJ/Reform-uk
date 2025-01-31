@@ -14,7 +14,14 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['@heroicons/react'],
     optimizeCss: true,
-    memoryBasedWorkersCount: true,
+  },
+  // Ensure proper handling of static files
+  distDir: '.next',
+  // Add proper cache configuration
+  generateEtags: true,
+  // Optimize production builds
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
 }
 
