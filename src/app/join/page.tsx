@@ -1,120 +1,157 @@
 export default function JoinPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="relative min-h-[40vh] flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 z-10" />
-        <div className="relative z-20 container mx-auto px-4 py-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              Join Reform UK
-            </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed">
-              Be part of the change. Help us build a better Britain.
+      <section className="relative py-20 bg-gradient-to-r from-reform-dark to-reform-primary dark:from-black dark:to-reform-dark">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h1 className="text-5xl font-bold mb-6">Join Reform UK Erdington</h1>
+            <p className="text-xl text-white/90">
+              Be part of the movement to bring positive change to our community.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20 bg-white">
+      {/* Membership Options */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {/* Membership Options */}
-            <div className="grid gap-8 mb-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-reform-dark dark:text-white">Membership Options</h2>
+              <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Choose the membership level that suits you best and join us in making a difference in Erdington.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
               {/* Standard Membership */}
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <h2 className="text-3xl font-bold mb-4">Standard Membership</h2>
-                <p className="text-lg text-gray-700 mb-6">
-                  Join Reform UK and help us bring real change to Britain. Your membership includes:
-                </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-2 mb-8">
-                  <li>Membership card</li>
-                  <li>Regular updates from Reform UK</li>
-                  <li>Invitations to local and national events</li>
-                  <li>Opportunity to shape party policy</li>
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border-2 border-transparent hover:border-reform-primary dark:hover:border-reform-dark transition-colors duration-300">
+                <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Standard</h3>
+                <div className="text-4xl font-bold mb-6 text-reform-primary dark:text-reform-light">£3<span className="text-lg text-gray-600 dark:text-gray-400">/month</span></div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Regular newsletters
+                  </li>
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Members-only events
+                  </li>
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Voting rights
+                  </li>
                 </ul>
-                <a
-                  href="https://www.reformparty.uk/join"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-reform-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-reform-light transition-colors duration-200"
-                >
+                <button className="w-full px-6 py-3 bg-reform-primary dark:bg-reform-dark text-white rounded-lg font-semibold hover:bg-reform-primary/90 dark:hover:bg-reform-dark/90 transition-colors duration-200">
                   Join Now
-                </a>
+                </button>
               </div>
 
-              {/* Armed Forces Membership */}
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <h2 className="text-3xl font-bold mb-4">Armed Forces Membership</h2>
-                <p className="text-lg text-gray-700 mb-6">
-                  For serving and veteran members of HM Armed Forces:
-                </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-2 mb-8">
-                  <li>All standard membership benefits</li>
-                  <li>Recognition of your service</li>
-                  <li>Special Armed Forces events</li>
+              {/* Premium Membership */}
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border-2 border-reform-primary dark:border-reform-dark transform scale-105">
+                <div className="absolute top-0 right-0 bg-reform-primary dark:bg-reform-dark text-white px-4 py-1 rounded-bl-lg rounded-tr-xl text-sm font-medium">
+                  Popular
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Premium</h3>
+                <div className="text-4xl font-bold mb-6 text-reform-primary dark:text-reform-light">£5<span className="text-lg text-gray-600 dark:text-gray-400">/month</span></div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    All Standard benefits
+                  </li>
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Priority event access
+                  </li>
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Exclusive content
+                  </li>
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Direct access to team
+                  </li>
                 </ul>
-                <a
-                  href="https://www.reformparty.uk/join"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-reform-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-reform-light transition-colors duration-200"
-                >
+                <button className="w-full px-6 py-3 bg-reform-primary dark:bg-reform-dark text-white rounded-lg font-semibold hover:bg-reform-primary/90 dark:hover:bg-reform-dark/90 transition-colors duration-200">
                   Join Now
-                </a>
+                </button>
               </div>
 
-              {/* Young Reformers */}
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <h2 className="text-3xl font-bold mb-4">Young Reformers (Under 25)</h2>
-                <p className="text-lg text-gray-700 mb-6">
-                  For members under 25 years old:
-                </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-2 mb-8">
-                  <li>All standard membership benefits</li>
-                  <li>Young Reformers network</li>
-                  <li>Special youth events and activities</li>
+              {/* Supporter Membership */}
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border-2 border-transparent hover:border-reform-primary dark:hover:border-reform-dark transition-colors duration-300">
+                <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Supporter</h3>
+                <div className="text-4xl font-bold mb-6 text-reform-primary dark:text-reform-light">£10<span className="text-lg text-gray-600 dark:text-gray-400">/month</span></div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    All Premium benefits
+                  </li>
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    VIP event invitations
+                  </li>
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Strategy meetings
+                  </li>
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Campaign involvement
+                  </li>
                 </ul>
-                <a
-                  href="https://www.reformparty.uk/join"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-reform-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-reform-light transition-colors duration-200"
-                >
+                <button className="w-full px-6 py-3 bg-reform-primary dark:bg-reform-dark text-white rounded-lg font-semibold hover:bg-reform-primary/90 dark:hover:bg-reform-dark/90 transition-colors duration-200">
                   Join Now
-                </a>
+                </button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Local Group */}
-            <div className="bg-reform-primary/5 p-8 rounded-xl text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Join Our Local Group</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Connect with Reform UK supporters in Erdington. Get involved in local campaigns and events.
-              </p>
-              <a
-                href="https://www.facebook.com/groups/916932353577131/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-reform-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-reform-light transition-colors duration-200"
-              >
-                Join Facebook Group
-              </a>
-            </div>
-
-            {/* Newsletter */}
-            <div className="bg-reform-primary/5 p-8 rounded-xl text-center">
-              <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Subscribe to our newsletter for updates on local events, campaigns, and ways to get involved.
-              </p>
-              <a
-                href="/contact"
-                className="inline-block bg-reform-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-reform-light transition-colors duration-200"
-              >
-                Subscribe
-              </a>
+      {/* Benefits Section */}
+      <section className="py-16 bg-reform-gray dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4 text-reform-dark dark:text-white">Why Join Us?</h2>
+            <p className="text-gray-600 dark:text-gray-300 mb-12">
+              As a member of Reform UK Erdington, you'll be part of a growing movement dedicated to bringing positive change to our community.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4 text-reform-dark dark:text-white">Make Your Voice Heard</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Participate in local decision-making and help shape the future of Erdington through regular member meetings and consultations.
+                </p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4 text-reform-dark dark:text-white">Connect with Others</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Join a community of like-minded individuals who are passionate about improving our local area and making a difference.
+                </p>
+              </div>
             </div>
           </div>
         </div>

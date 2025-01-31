@@ -1,45 +1,55 @@
 import { getContent } from '@/utils/content'
-import dynamic from 'next/dynamic'
-import Image from 'next/image'
+import EventsClient from '@/components/EventsClient'
 
-const EventsClient = dynamic(() => import('@/components/EventsClient'), {
-  ssr: false
-})
+const mockEvents = [
+  {
+    id: '1',
+    title: 'Community Meeting: Local Issues',
+    date: 'February 15, 2025',
+    location: 'Castle Vale Community Centre',
+    description: 'Join us for an open discussion about local issues affecting Castle Vale and surrounding areas. Share your concerns and ideas for improvement.',
+    imageUrl: '/images/events-hero.jpg',
+    registrationUrl: '/events/community-meeting',
+  },
+  {
+    id: '2',
+    title: 'Reform UK Erdington Campaign Launch',
+    date: 'February 20, 2025',
+    location: 'Erdington Community Centre',
+    description: 'Be part of our official campaign launch in Erdington. Learn about our vision for the area and how you can get involved.',
+    imageUrl: '/images/hero.jpg',
+    registrationUrl: '/events/campaign-launch',
+  },
+  {
+    id: '3',
+    title: 'Local Business Forum',
+    date: 'March 1, 2025',
+    location: 'Pype Hayes Community Hall',
+    description: 'A forum for local business owners to discuss economic growth opportunities and challenges in the Erdington area.',
+    imageUrl: '/images/growth-hero.jpg',
+    registrationUrl: '/events/business-forum',
+  },
+]
 
 export default function EventsPage() {
   const content = getContent()
-  const { events } = content
-
+  
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-gradient-to-r from-reform-dark/90 to-reform-primary/70 z-10" />
-        <Image
-          src="/images/events-hero.jpg"
-          alt="ReformUK Erdington Events"
-          fill
-          className="absolute inset-0 object-cover"
-          priority
-        />
-        <div className="relative z-20 container mx-auto px-4 py-20">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              Events
-            </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed">
-              {events.intro}
+      <section className="relative py-20 bg-gradient-to-r from-reform-dark to-reform-primary dark:from-black dark:to-reform-dark">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h1 className="text-5xl font-bold mb-6">Events</h1>
+            <p className="text-xl text-white/90">
+              {content.events.intro}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Events Content */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <EventsClient content={events} />
-        </div>
-      </section>
+      {/* Events List */}
+      <EventsClient events={mockEvents} />
     </div>
   )
 }

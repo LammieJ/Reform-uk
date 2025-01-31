@@ -29,7 +29,7 @@ export default function Navigation() {
   ]
 
   return (
-    <header className="bg-reform-primary shadow-sm">
+    <header className="bg-reform-primary dark:bg-gray-900 shadow-sm">
       <div className="container mx-auto max-w-7xl px-4">
         {/* Top bar */}
         <div className="text-center py-2 text-sm text-white/90 border-b border-white/20">
@@ -67,7 +67,7 @@ export default function Navigation() {
                     </svg>
                   </button>
                   <div 
-                    className={`absolute left-0 mt-1 w-48 bg-white rounded shadow-lg py-1 transform transition-all duration-200 ${
+                    className={`absolute left-0 mt-1 w-48 bg-white dark:bg-gray-800 rounded shadow-lg py-1 transform transition-all duration-200 ${
                       openDropdown === item.href ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                     }`}
                     onMouseEnter={() => setOpenDropdown(item.href)}
@@ -77,7 +77,7 @@ export default function Navigation() {
                       <Link
                         key={subItem.href}
                         href={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-reform-primary hover:text-white"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-reform-primary hover:text-white dark:hover:bg-reform-dark"
                       >
                         {subItem.label}
                       </Link>
@@ -105,15 +105,15 @@ export default function Navigation() {
             <div className="flex items-center gap-2">
               <button
                 onClick={toggleDarkMode}
-                className="bg-white text-reform-primary dark:bg-reform-dark dark:text-white px-3 py-2 text-sm font-medium rounded-md hover:bg-white/90 dark:hover:bg-reform-dark/90 transition-colors duration-200"
+                className="bg-white dark:bg-gray-800 text-reform-primary dark:text-white px-3 py-2 text-sm font-medium rounded-md hover:bg-white/90 dark:hover:bg-gray-700 transition-all duration-300"
                 aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
               >
                 {isDarkMode ? (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 ) : (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                   </svg>
                 )}
@@ -122,7 +122,7 @@ export default function Navigation() {
                 href="https://x.com/ReformErdington"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-reform-primary px-5 py-2 text-sm font-medium rounded-md hover:bg-white/90 transition-colors duration-200"
+                className="bg-white dark:bg-gray-800 text-reform-primary dark:text-white px-5 py-2 text-sm font-medium rounded-md hover:bg-white/90 dark:hover:bg-gray-700 transition-colors duration-200"
               >
                 Follow on X
               </a>
@@ -130,7 +130,7 @@ export default function Navigation() {
                 href="https://www.facebook.com/groups/916932353577131/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-reform-primary px-5 py-2 text-sm font-medium rounded-md hover:bg-white/90 transition-colors duration-200"
+                className="bg-white dark:bg-gray-800 text-reform-primary dark:text-white px-5 py-2 text-sm font-medium rounded-md hover:bg-white/90 dark:hover:bg-gray-700 transition-colors duration-200"
               >
                 Facebook Group
               </a>
@@ -164,7 +164,7 @@ export default function Navigation() {
         <div className={`lg:hidden border-t border-white/20 overflow-hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="py-4 bg-gradient-to-b from-black/5 to-transparent">
+          <div className="py-4 bg-gradient-to-b from-black/5 to-transparent dark:from-white/5">
             {menuItems.map((item) => (
               item.subItems ? (
                 <div key={item.href} className="mb-4">
@@ -208,15 +208,29 @@ export default function Navigation() {
               <div className="flex flex-col gap-2 px-3 mt-4">
                 <button
                   onClick={toggleDarkMode}
-                  className="block bg-white text-reform-primary dark:bg-reform-dark dark:text-white px-4 py-2 rounded-md hover:bg-white/90 dark:hover:bg-reform-dark/90 transition-colors duration-200 text-center"
+                  className="block bg-white dark:bg-gray-800 text-reform-primary dark:text-white px-4 py-2 rounded-md hover:bg-white/90 dark:hover:bg-gray-700 transition-colors duration-200 text-center"
                 >
-                  {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+                  {isDarkMode ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <svg className="w-5 h-5 text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                      Light Mode
+                    </span>
+                  ) : (
+                    <span className="flex items-center justify-center gap-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                      </svg>
+                      Dark Mode
+                    </span>
+                  )}
                 </button>
                 <a
                   href="https://x.com/ReformErdington"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block bg-white text-reform-primary px-4 py-2 rounded-md hover:bg-white/90 transition-colors duration-200 text-center"
+                  className="block bg-white dark:bg-gray-800 text-reform-primary dark:text-white px-4 py-2 rounded-md hover:bg-white/90 dark:hover:bg-gray-700 transition-colors duration-200 text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Follow on X
@@ -225,7 +239,7 @@ export default function Navigation() {
                   href="https://www.facebook.com/groups/916932353577131/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block bg-white text-reform-primary px-4 py-2 rounded-md hover:bg-white/90 transition-colors duration-200 text-center"
+                  className="block bg-white dark:bg-gray-800 text-reform-primary dark:text-white px-4 py-2 rounded-md hover:bg-white/90 dark:hover:bg-gray-700 transition-colors duration-200 text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Facebook Group

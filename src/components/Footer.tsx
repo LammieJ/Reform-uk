@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="bg-reform-primary text-white py-12">
+    <footer className="bg-reform-primary dark:bg-reform-dark text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <p className="mb-2">ReformUK Erdington, Castle Vale, Pype Hayes, Stockland Green, Kingstanding. </p>
-            <p className="mb-2">Email: chair.bhamerdington@reform.com</p>
+            <p className="mb-2 text-white/90 dark:text-white/80">ReformUK Erdington, Castle Vale, Pype Hayes, Stockland Green, Kingstanding. </p>
+            <p className="mb-2 text-white/90 dark:text-white/80">Email: chair.bhamerdington@reform.com</p>
           </div>
 
           {/* Quick Links */}
@@ -19,7 +19,7 @@ export default function Footer() {
                   href="https://www.facebook.com/groups/916932353577131/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-reform-light transition-colors duration-200"
+                  className="text-white/90 dark:text-white/80 hover:text-reform-light transition-colors duration-200"
                 >
                   Facebook Group
                 </a>
@@ -29,7 +29,7 @@ export default function Footer() {
                   href="https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-reform-light transition-colors duration-200"
+                  className="text-white/90 dark:text-white/80 hover:text-reform-light transition-colors duration-200"
                 >
                   Our Contract
                 </a>
@@ -39,7 +39,7 @@ export default function Footer() {
                   href="https://reformuk.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-reform-light transition-colors duration-200"
+                  className="text-white/90 dark:text-white/80 hover:text-reform-light transition-colors duration-200"
                 >
                   ReformUK National
                 </a>
@@ -55,7 +55,7 @@ export default function Footer() {
                 href="https://www.facebook.com/groups/916932353577131/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-reform-light transition-colors duration-200"
+                className="text-white/90 dark:text-white/80 hover:text-reform-light transition-colors duration-200"
                 aria-label="Facebook"
               >
                 <svg
@@ -75,8 +75,8 @@ export default function Footer() {
                 href="https://x.com/ReformErdington"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-reform-light transition-colors duration-200"
-                aria-label="Twitter"
+                className="text-white/90 dark:text-white/80 hover:text-reform-light transition-colors duration-200"
+                aria-label="X (Twitter)"
               >
                 <svg
                   className="w-6 h-6"
@@ -92,7 +92,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 text-center text-sm">
+        <div className="mt-12 text-center text-sm text-white/90 dark:text-white/80">
           <p>© {new Date().getFullYear()} ReformUK Erdington. All rights reserved.</p>
         </div>
       </div>

@@ -10,25 +10,19 @@ export default function NewsletterSignup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('loading')
-    setMessage('')
 
     try {
       const response = await fetch('/api/newsletter/subscribe', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       })
 
       const data = await response.json()
 
-      if (response.status === 503) {
-        setStatus('error')
-        setMessage(data.message || 'Newsletter signup is temporarily unavailable.')
-      } else if (response.ok) {
+      if (response.ok) {
         setStatus('success')
-        setMessage('Please check your email to confirm your subscription.')
+        setMessage('Thank you for subscribing!')
         setEmail('')
       } else {
         setStatus('error')
@@ -41,50 +35,34 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
-      <p className="mb-6 text-gray-600">
-        Join our newsletter to receive updates about our activities and how you can get involved.
+    <div className="text-center">
+      <h2 className="text-3xl font-bold mb-4 text-reform-dark dark:text-white">Stay Updated</h2>
+      <p className="text-gray-600 dark:text-gray-300 mb-8">
+        Subscribe to our newsletter for updates on our campaign and local events.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label htmlFor="email" className="sr-only">
-            Email address
-          </label>
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+        <div className="flex flex-col sm:flex-row gap-4">
           <input
-            id="email"
-            name="email"
             type="email"
-            required
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-reform-primary focus:border-transparent"
-            placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            disabled={status === 'loading'}
+            placeholder="Enter your email"
+            required
+            className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-reform-primary dark:focus:ring-reform-light"
           />
-        </div>
-
-        <button
-          type="submit"
-          disabled={status === 'loading'}
-          className={`w-full btn btn-primary ${
-            status === 'loading' ? 'opacity-75 cursor-not-allowed' : ''
-          }`}
-        >
-          {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
-        </button>
-
-        {message && (
-          <div
-            className={`p-4 rounded-lg ${
-              status === 'success'
-                ? 'bg-green-100 text-green-700'
-                : 'bg-red-100 text-red-700'
-            }`}
+          <button
+            type="submit"
+            disabled={status === 'loading'}
+            className="px-6 py-3 bg-reform-primary dark:bg-reform-dark text-white rounded-lg font-semibold hover:bg-reform-primary/90 dark:hover:bg-reform-dark/90 transition-colors duration-200 disabled:opacity-50"
           >
+            {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+          </button>
+        </div>
+        {message && (
+          <p className={`mt-4 ${status === 'success' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
             {message}
-          </div>
+          </p>
         )}
       </form>
     </div>
