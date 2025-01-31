@@ -20,6 +20,14 @@ export default function JoinPage() {
       benefits: ["Support our campaigns", "Stay informed", "Local event invitations", "Make a difference"],
       url: "https://www.reformparty.uk/donate-1",
       bgColor: "bg-reform-dark"
+    },
+    {
+      title: "Volunteer",
+      description: "Get involved in your local community",
+      benefits: ["Help with campaigns", "Join local events", "Make connections", "Share your skills"],
+      url: "/volunteer",
+      bgColor: "bg-reform-secondary",
+      isLocal: true
     }
   ]
 
@@ -40,13 +48,13 @@ export default function JoinPage() {
       {/* Membership Types */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {membershipTypes.map((type, index) => (
               <a
                 key={index}
                 href={type.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={type.isLocal ? undefined : "_blank"}
+                rel={type.isLocal ? undefined : "noopener noreferrer"}
                 className="block group"
               >
                 <div className={`${type.bgColor} text-white rounded-lg p-6 h-full transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl dark:shadow-black/30`}>
@@ -64,7 +72,7 @@ export default function JoinPage() {
                       ))}
                     </ul>
                     <div className="inline-flex items-center text-white group-hover:translate-x-1 transition-transform">
-                      <span className="mr-2">Join Now</span>
+                      <span className="mr-2">{type.isLocal ? 'Get Involved' : 'Join Now'}</span>
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
