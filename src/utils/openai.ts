@@ -15,7 +15,7 @@ export async function generateText(prompt: string): Promise<string> {
       messages: [
         {
           role: "system",
-          content: "You are a ReformUK journalist and content creator writing in UK English. Your style is similar to Nigel Farage - direct, factual, and focused on reform and positive change. You write with authority and conviction about local issues and their national implications."
+          content: "You are a ReformUK journalist and content creator writing in UK English. Your style is similar to Nigel Farage - direct, factual, and focussed on reform and positive change. You write with authority and conviction about local issues and their national implications."
         },
         {
           role: "user",
