@@ -74,14 +74,14 @@ export default function VolunteerPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg dark:prose-invert mx-auto mb-12">
-              <h2>Why Volunteer?</h2>
-              <p>
+            <div className="prose prose-lg mx-auto mb-12 dark:prose-invert">
+              <h2 className="text-gray-900 dark:text-white">Why Volunteer?</h2>
+              <p className="text-gray-800 dark:text-gray-200">
                 Volunteering with Reform UK Erdington is a great way to get involved in local politics and make a real difference in your community. Whether you have a few hours a week or can help at specific events, we welcome volunteers from all backgrounds and experience levels.
               </p>
 
-              <h3>What You Can Do</h3>
-              <ul>
+              <h3 className="text-gray-900 dark:text-white">What You Can Do</h3>
+              <ul className="text-gray-800 dark:text-gray-200">
                 <li>Help with local campaigns and events</li>
                 <li>Assist with social media and digital communications</li>
                 <li>Support administrative tasks and organization</li>
@@ -89,8 +89,8 @@ export default function VolunteerPage() {
                 <li>Contribute your unique skills and expertise</li>
               </ul>
 
-              <h3>Benefits of Volunteering</h3>
-              <ul>
+              <h3 className="text-gray-900 dark:text-white">Benefits of Volunteering</h3>
+              <ul className="text-gray-800 dark:text-gray-200">
                 <li>Gain valuable experience in local politics</li>
                 <li>Meet like-minded people in your community</li>
                 <li>Make a real difference in Erdington</li>
@@ -105,7 +105,7 @@ export default function VolunteerPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                       Name *
                     </label>
                     <input
@@ -119,7 +119,7 @@ export default function VolunteerPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                       Email *
                     </label>
                     <input
@@ -135,7 +135,7 @@ export default function VolunteerPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                     Phone Number
                   </label>
                   <input
@@ -149,7 +149,7 @@ export default function VolunteerPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="skills" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label htmlFor="skills" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                     Skills & Experience
                   </label>
                   <input
@@ -159,12 +159,12 @@ export default function VolunteerPage() {
                     value={formData.skills}
                     onChange={handleChange}
                     placeholder="e.g., Social media, event planning, administration"
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-reform-primary dark:focus:ring-reform-secondary focus:border-reform-primary dark:focus:border-reform-secondary bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-reform-primary dark:focus:ring-reform-secondary focus:border-reform-primary dark:focus:border-reform-secondary bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="availability" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label htmlFor="availability" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                     Availability
                   </label>
                   <select
@@ -174,16 +174,16 @@ export default function VolunteerPage() {
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-reform-primary dark:focus:ring-reform-secondary focus:border-reform-primary dark:focus:border-reform-secondary bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   >
-                    <option value="">Select your availability</option>
-                    <option value="weekdays">Weekdays</option>
-                    <option value="evenings">Evenings</option>
-                    <option value="weekends">Weekends</option>
-                    <option value="flexible">Flexible</option>
+                    <option value="" className="text-gray-500 dark:text-gray-400">Select your availability</option>
+                    <option value="weekdays" className="text-gray-900 dark:text-white">Weekdays</option>
+                    <option value="evenings" className="text-gray-900 dark:text-white">Evenings</option>
+                    <option value="weekends" className="text-gray-900 dark:text-white">Weekends</option>
+                    <option value="flexible" className="text-gray-900 dark:text-white">Flexible</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                     Message *
                   </label>
                   <textarea
@@ -194,7 +194,7 @@ export default function VolunteerPage() {
                     onChange={handleChange}
                     rows={4}
                     placeholder="Tell us about yourself and how you'd like to help..."
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-reform-primary dark:focus:ring-reform-secondary focus:border-reform-primary dark:focus:border-reform-secondary bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-reform-primary dark:focus:ring-reform-secondary focus:border-reform-primary dark:focus:border-reform-secondary bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   />
                 </div>
 
