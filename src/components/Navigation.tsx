@@ -132,20 +132,6 @@ export default function Navigation() {
             >
               {theme === 'dark' ? '🌞' : '🌙'}
             </button>
-            <div className="flex items-center space-x-3 ml-4">
-              <Link
-                href="/join"
-                className="bg-reform-primary text-white dark:bg-white dark:text-reform-primary px-4 py-1.5 rounded font-semibold hover:bg-reform-secondary dark:hover:bg-reform-gray"
-              >
-                Join Us
-              </Link>
-              <Link
-                href="/volunteer"
-                className="bg-reform-primary text-white dark:bg-white dark:text-reform-primary px-4 py-1.5 rounded font-semibold hover:bg-reform-secondary dark:hover:bg-reform-gray"
-              >
-                Volunteer
-              </Link>
-            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -271,22 +257,6 @@ export default function Navigation() {
             >
               <FaTwitter className="h-5 w-5" />
             </a>
-          </div>
-          <div className="px-4 py-2 space-y-2">
-            <Link
-              href="/join"
-              className="block bg-reform-primary text-white dark:bg-white dark:text-reform-primary px-4 py-2 rounded text-center font-semibold hover:bg-reform-secondary dark:hover:bg-reform-gray"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Join Us
-            </Link>
-            <Link
-              href="/volunteer"
-              className="block bg-reform-primary text-white dark:bg-white dark:text-reform-primary px-4 py-2 rounded text-center font-semibold hover:bg-reform-secondary dark:hover:bg-reform-gray"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Volunteer
-            </Link>
           </div>
         </div>
       </div>
