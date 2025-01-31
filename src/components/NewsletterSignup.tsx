@@ -23,7 +23,10 @@ export default function NewsletterSignup() {
 
       const data = await response.json()
 
-      if (response.ok) {
+      if (response.status === 503) {
+        setStatus('error')
+        setMessage(data.message || 'Newsletter signup is temporarily unavailable.')
+      } else if (response.ok) {
         setStatus('success')
         setMessage('Please check your email to confirm your subscription.')
         setEmail('')

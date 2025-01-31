@@ -1,16 +1,21 @@
 import { NextResponse } from 'next/server'
 import mailchimp from '@mailchimp/mailchimp_marketing'
 
-if (!process.env.MAILCHIMP_API_KEY || !process.env.MAILCHIMP_LIST_ID || !process.env.MAILCHIMP_API_SERVER) {
-  throw new Error('Missing required Mailchimp environment variables')
-}
-
-mailchimp.setConfig({
-  apiKey: process.env.MAILCHIMP_API_KEY,
-  server: process.env.MAILCHIMP_API_SERVER,
-})
-
 export async function POST(request: Request) {
+  // Check if Mailchimp is configured
+  if (!process.env.MAILCHIMP_API_KEY || !process.env.MAILCHIMP_LIST_ID || !process.env.MAILCHIMP_API_SERVER) {
+    return NextResponse.json(
+      { message: 'Newsletter signup is temporarily unavailable.' },
+      { status: 503 }
+    )
+  }
+
+  // Configure Mailchimp
+  mailchimp.setConfig({
+    apiKey: process.env.MAILCHIMP_API_KEY,
+    server: process.env.MAILCHIMP_API_SERVER,
+  })
+
   try {
     const { email } = await request.json()
 
