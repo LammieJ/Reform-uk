@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 
-const metadataBase = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
+const metadataBase = process.env.NEXT_PUBLIC_VERCEL_URL
+  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
   : process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
-    : 'https://erdington.reform.uk'
+    : 'https://reform-uk-erdington.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(metadataBase),
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Reform UK Erdington',
     description: 'Reform UK Erdington Branch - Fighting for a better Erdington',
-    images: ['/images/hero.jpg'],
+    images: [{ url: '/images/hero.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -21,4 +21,6 @@ export const metadata: Metadata = {
     description: 'Reform UK Erdington Branch - Fighting for a better Erdington',
     images: ['/images/hero.jpg'],
   },
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
 }
