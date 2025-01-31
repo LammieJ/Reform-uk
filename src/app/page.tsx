@@ -24,8 +24,11 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
               Reform Erdington
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-12">
-              {hero.text}
+            <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-6">
+              Join us in making real change in Erdington, Castle Vale, Pype Hayes, Stockland Green and Kingstanding
+            </p>
+            <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-12">
+              We're committed to cutting taxes, reducing net migration to zero, protecting our NHS, and bringing common sense back to local governance. Together, we can build a stronger, more prosperous community where your voice matters and your vote counts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
