@@ -44,6 +44,14 @@ export default function Footer() {
                   ReformUK National
                 </a>
               </li>
+              <li>
+                <a
+                  href="/privacy-policy"
+                  className="text-white/90 dark:text-white/80 hover:text-reform-light transition-colors duration-200"
+                >
+                  Privacy Policy
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -93,7 +101,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-12 text-center text-sm text-white/90 dark:text-white/80">
-          <p>© {new Date().getFullYear()} ReformUK Erdington. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} ReformUK Erdington. All rights reserved. <a href="/privacy-policy" className="hover:text-reform-light transition-colors duration-200">Privacy Policy</a></p>
         </div>
       </div>
     </footer>
