@@ -155,10 +155,10 @@ export default function Navigation() {
         {/* Mobile menu */}
         <div
           className={`${
-            isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-          } md:hidden overflow-hidden transition-all duration-300 ease-in-out`}
+            isMobileMenuOpen ? 'max-h-[32rem] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4'
+          } md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white/90 dark:bg-reform-dark/90 backdrop-blur-lg supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-reform-dark/60`}
         >
-          <div className="py-4 space-y-2 border-t border-reform-primary/10 dark:border-white/10">
+          <div className="py-4 space-y-2 border-t border-reform-primary/10 dark:border-white/10 px-2">
             {[
               { href: '/about', text: 'About' },
               { href: '/events', text: 'Events' }
