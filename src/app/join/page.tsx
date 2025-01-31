@@ -1,24 +1,24 @@
 export default function JoinPage() {
   const membershipTypes = [
     {
-      title: "Registered Supporter",
-      description: "Stay informed about our campaigns and show your support for Reform UK",
-      benefits: ["Regular newsletters", "Campaign updates", "Local event invitations"],
-      url: "https://join.reformparty.uk/supporter",
+      title: "Member",
+      description: "Full membership with voting rights and exclusive benefits",
+      benefits: ["Voting rights", "Members-only events", "Policy input", "Regular newsletters"],
+      url: "https://www.reformparty.uk/join_member",
       bgColor: "bg-reform-primary"
     },
     {
-      title: "Member",
-      description: "Full membership with voting rights and exclusive benefits",
-      benefits: ["All Supporter benefits", "Voting rights", "Members-only events", "Policy input"],
-      url: "https://join.reformparty.uk/member",
+      title: "Under 25",
+      description: "Special membership for young reformers",
+      benefits: ["All member benefits", "Youth events", "Network with young reformers", "Shape the future"],
+      url: "https://www.reformparty.uk/join_young_member",
       bgColor: "bg-reform-secondary"
     },
     {
-      title: "Patron",
-      description: "Premium membership with additional privileges",
-      benefits: ["All Member benefits", "Priority event access", "Direct team contact", "Strategy meetings"],
-      url: "https://join.reformparty.uk/patron",
+      title: "Supporter",
+      description: "Show your support for Reform UK",
+      benefits: ["Support our campaigns", "Stay informed", "Local event invitations", "Make a difference"],
+      url: "https://www.reformparty.uk/donate-1",
       bgColor: "bg-reform-dark"
     }
   ]
@@ -31,7 +31,7 @@ export default function JoinPage() {
           <div className="max-w-3xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Join Reform UK</h1>
             <p className="text-lg md:text-xl text-white/90">
-              Choose your membership type and help us reform Britain
+              Choose how you want to support Reform UK and help us reform Britain
             </p>
           </div>
         </div>
@@ -86,12 +86,12 @@ export default function JoinPage() {
               Join Reform UK today and help us build a better Britain. Your support will help us campaign for real change.
             </p>
             <a
-              href="https://join.reformparty.uk"
+              href="https://www.reformparty.uk/join_member"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-reform-primary dark:bg-reform-dark text-white rounded-lg font-semibold hover:bg-reform-primary/90 dark:hover:bg-reform-dark/90 transition-colors duration-200"
             >
-              View All Membership Options
+              Become a Member
             </a>
           </div>
         </div>
