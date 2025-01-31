@@ -102,7 +102,7 @@ export default function Navigation() {
             </a>
             <div className="flex items-center gap-2">
               <a
-                href="https://twitter.com/ReformErdington"
+                href="https://x.com/ReformErdington"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-reform-primary px-5 py-2 text-sm font-medium rounded-md hover:bg-white/90 transition-colors duration-200"
@@ -190,7 +190,7 @@ export default function Navigation() {
               </a>
               <div className="flex flex-col gap-2 px-3 mt-4">
                 <a
-                  href="https://twitter.com/ReformErdington"
+                  href="https://x.com/ReformErdington"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-white text-reform-primary px-4 py-2 rounded-md hover:bg-white/90 transition-colors duration-200 text-center"

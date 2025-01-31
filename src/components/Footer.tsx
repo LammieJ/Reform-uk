@@ -6,8 +6,8 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <p className="mb-2">ReformUK Erdington</p>
-            <p className="mb-2">Email: erdington@reformuk.com</p>
+            <p className="mb-2">ReformUK Erdington, Castle Vale, Pype Hayes, Stockland Green, Kingstanding. </p>
+            <p className="mb-2">Email: chair.bhamerdington@reform.com</p>
           </div>
 
           {/* Quick Links */}
@@ -72,7 +72,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://twitter.com/reformuk"
+                href="https://x.com/ReformErdington"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-reform-light transition-colors duration-200"
