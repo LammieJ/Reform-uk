@@ -4,21 +4,12 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com'],
   },
-  experimental: {
-    optimizePackageImports: ['@heroicons/react'],
-  },
-  // Disable file watching to prevent stack overflow
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
-  // Simplify webpack configuration
-  webpack: (config) => {
-    config.watchOptions = {
-      poll: false,
-      ignored: ['**/.git/**', '**/node_modules/**', '**/.next/**'],
-    }
-    return config
+  // Production optimizations
+  poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
 }
 
