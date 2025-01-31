@@ -11,8 +11,6 @@ scripts/
 # Development configs
 .eslintrc*
 .prettierrc*
-*.config.js
-*.config.ts
 
 # Misc
 README.md
