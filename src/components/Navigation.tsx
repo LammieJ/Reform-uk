@@ -106,7 +106,7 @@ export default function Navigation() {
             </Link>
             <div className="flex items-center space-x-3 ml-4">
               <a
-                href="https://facebook.com/ReformUKErdington"
+                href="https://www.facebook.com/groups/916932353577131"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-reform-dark dark:text-white hover:text-reform-primary dark:hover:text-reform-light"
@@ -232,7 +232,7 @@ export default function Navigation() {
           </Link>
           <div className="flex space-x-4 px-4 py-2">
             <a
-              href="https://facebook.com/ReformUKErdington"
+              href="https://www.facebook.com/groups/916932353577131"
               target="_blank"
               rel="noopener noreferrer"
               className="text-reform-dark dark:text-white hover:text-reform-primary dark:hover:text-reform-light"
