@@ -27,43 +27,43 @@ export default function DriveGrowthPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Key Points */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Our Growth Plan</h2>
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our Growth Plan</h2>
               <div className="grid gap-8">
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Cut Red Tape</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Cut Red Tape</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will slash bureaucracy and make it easier to do business in Erdington.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Simplify business regulations</li>
                     <li>Speed up planning processes</li>
                     <li>Reduce paperwork burden</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Support Local Business</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Support Local Business</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will create the conditions for local businesses to thrive and expand.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Reduce business rates by 50%</li>
                     <li>Support for startups and entrepreneurs</li>
                     <li>Improve access to finance</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Attract Investment</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Attract Investment</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will make Erdington a magnet for new business and investment.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Create enterprise zones</li>
                     <li>Improve local infrastructure</li>
                     <li>Develop skilled workforce</li>
@@ -74,12 +74,12 @@ export default function DriveGrowthPage() {
 
             {/* Local Impact */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Impact on Erdington</h2>
-              <div className="bg-reform-primary/5 p-8 rounded-xl">
-                <p className="text-lg text-gray-700 mb-6">
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Impact on Erdington</h2>
+              <div className="bg-reform-primary/5 dark:bg-gray-800 p-8 rounded-xl">
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
                   Our growth plan will deliver real benefits for Erdington:
                 </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-4">
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-4">
                   <li>More local jobs and opportunities</li>
                   <li>Thriving high street businesses</li>
                   <li>Increased investment in local area</li>

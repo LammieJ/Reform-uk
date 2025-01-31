@@ -27,43 +27,43 @@ export default function FightCrimePage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Key Points */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Our Crime Fighting Plan</h2>
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our Crime Fighting Plan</h2>
               <div className="grid gap-8">
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">More Police on Streets</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">More Police on Streets</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will increase visible policing and ensure officers spend more time on the beat.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Increased police presence in Erdington</li>
                     <li>Focus on neighborhood policing</li>
                     <li>Rapid response to emergencies</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Tougher Sentences</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Tougher Sentences</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will ensure criminals face proper punishment and victims see justice done.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Mandatory minimum sentences</li>
                     <li>End early release for violent offenders</li>
                     <li>Better support for victims</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Community Safety</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Community Safety</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will work with communities to prevent crime and make neighborhoods safer.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Expand CCTV coverage</li>
                     <li>Better street lighting</li>
                     <li>Support neighborhood watch schemes</li>
@@ -74,12 +74,12 @@ export default function FightCrimePage() {
 
             {/* Local Impact */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Impact on Erdington</h2>
-              <div className="bg-reform-primary/5 p-8 rounded-xl">
-                <p className="text-lg text-gray-700 mb-6">
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Impact on Erdington</h2>
+              <div className="bg-reform-primary/5 dark:bg-gray-800 p-8 rounded-xl">
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
                   Our crime fighting plan will deliver real improvements for Erdington:
                 </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-4">
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-4">
                   <li>Safer streets and public spaces</li>
                   <li>Reduced anti-social behavior</li>
                   <li>Better protection for local businesses</li>

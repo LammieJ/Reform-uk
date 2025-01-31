@@ -27,43 +27,43 @@ export default function CutTaxesPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Key Points */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8">Our Tax Cutting Plan</h2>
               <div className="grid gap-8">
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Business Rates</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Business Rates</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will cut business rates by 50% to help local businesses thrive and revitalize Erdington High Street.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Immediate 50% reduction in business rates</li>
                     <li>Support for small and medium businesses</li>
                     <li>Boost local enterprise and job creation</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Income Tax</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Income Tax</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will raise the personal allowance and reduce income tax rates to help working families keep more of their money.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Increase personal allowance</li>
                     <li>Lower basic rate of income tax</li>
                     <li>Support for working families</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Corporation Tax</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Corporation Tax</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will reduce corporation tax to attract investment and create jobs in Erdington.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Lower corporation tax rates</li>
                     <li>Encourage business investment</li>
                     <li>Create local job opportunities</li>
@@ -74,12 +74,12 @@ export default function CutTaxesPage() {
 
             {/* Local Impact */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Impact on Erdington</h2>
-              <div className="bg-reform-primary/5 p-8 rounded-xl">
-                <p className="text-lg text-gray-700 mb-6">
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Impact on Erdington</h2>
+              <div className="bg-reform-primary/5 dark:bg-gray-800 p-8 rounded-xl">
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
                   Our tax cutting plan will deliver real benefits for Erdington:
                 </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-4">
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-4">
                   <li>More local jobs and opportunities</li>
                   <li>Thriving high street businesses</li>
                   <li>Increased investment in local area</li>

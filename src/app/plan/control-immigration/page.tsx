@@ -27,43 +27,43 @@ export default function ControlImmigrationPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Key Points */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Our Immigration Control Plan</h2>
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our Immigration Control Plan</h2>
               <div className="grid gap-8">
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Zero Net Migration</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Zero Net Migration</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will implement a balanced migration policy where the number of people entering equals those leaving.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Strict control of immigration numbers</li>
                     <li>Points-based system for skilled workers</li>
                     <li>Protection of British jobs and wages</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Border Control</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Border Control</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will take back control of our borders and end illegal immigration.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Strengthen border security</li>
                     <li>End illegal Channel crossings</li>
                     <li>Swift removal of illegal immigrants</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Protect Public Services</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Protect Public Services</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will ensure our public services can meet local needs without excessive pressure.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Reduce pressure on NHS services</li>
                     <li>Protect school places for local children</li>
                     <li>Sustainable housing development</li>
@@ -74,12 +74,12 @@ export default function ControlImmigrationPage() {
 
             {/* Local Impact */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Impact on Erdington</h2>
-              <div className="bg-reform-primary/5 p-8 rounded-xl">
-                <p className="text-lg text-gray-700 mb-6">
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Impact on Erdington</h2>
+              <div className="bg-reform-primary/5 dark:bg-gray-800 p-8 rounded-xl">
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
                   Our immigration control plan will deliver real benefits for Erdington:
                 </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-4">
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-4">
                   <li>Reduced pressure on local GP services</li>
                   <li>More school places for local families</li>
                   <li>Better availability of social housing</li>

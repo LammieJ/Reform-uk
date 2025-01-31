@@ -12,7 +12,6 @@ export default function Navigation() {
   const menuItems = [
     { label: 'Home', href: '/' },
     { label: 'Events', href: '/events' },
-    { label: 'News', href: '/news' },
     { 
       label: 'Our Plan',
       href: '#',
@@ -51,8 +50,7 @@ export default function Navigation() {
                 <div key={item.href} className="relative">
                   <button 
                     className="text-white text-sm font-medium flex items-center gap-1 hover:bg-white/10 transition-colors duration-200 px-3 py-2 rounded-md"
-                    onMouseEnter={() => setOpenDropdown(item.href)}
-                    onMouseLeave={() => setOpenDropdown(null)}
+                    onClick={() => setOpenDropdown(openDropdown === item.href ? null : item.href)}
                   >
                     {item.label}
                     <svg 
@@ -67,17 +65,16 @@ export default function Navigation() {
                     </svg>
                   </button>
                   <div 
-                    className={`absolute left-0 mt-1 w-48 bg-white dark:bg-gray-800 rounded shadow-lg py-1 transform transition-all duration-200 ${
+                    className={`absolute left-0 mt-1 w-48 bg-reform-primary dark:bg-gray-800 rounded shadow-lg py-1 transform transition-all duration-200 ${
                       openDropdown === item.href ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                     }`}
-                    onMouseEnter={() => setOpenDropdown(item.href)}
-                    onMouseLeave={() => setOpenDropdown(null)}
+                    style={{ zIndex: 50 }}
                   >
                     {item.subItems.map((subItem) => (
                       <Link
                         key={subItem.href}
                         href={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-reform-primary hover:text-white dark:hover:bg-reform-dark"
+                        className="block px-4 py-2 text-white hover:bg-white/10 dark:hover:bg-reform-primary/20 transition-colors duration-200"
                       >
                         {subItem.label}
                       </Link>

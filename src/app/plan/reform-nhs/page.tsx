@@ -27,43 +27,43 @@ export default function ReformNHSPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Key Points */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Our NHS Reform Plan</h2>
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Our NHS Reform Plan</h2>
               <div className="grid gap-8">
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Cut Waiting Lists</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Cut Waiting Lists</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will take immediate action to reduce NHS waiting lists and ensure faster access to treatment.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Increase use of private sector capacity</li>
                     <li>Streamline referral processes</li>
                     <li>Expand diagnostic capabilities</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Improve GP Access</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Improve GP Access</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will ensure everyone can see a GP within a reasonable timeframe and restore the doctor-patient relationship.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>7-day GP access</li>
                     <li>More face-to-face appointments</li>
                     <li>Better use of technology</li>
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold mb-4">Mental Health Services</h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-reform-dark dark:text-white">Mental Health Services</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                     We will improve access to mental health services and reduce waiting times for treatment.
                   </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Expand community mental health teams</li>
                     <li>Increase crisis support</li>
                     <li>Better integration with social care</li>
@@ -74,12 +74,12 @@ export default function ReformNHSPage() {
 
             {/* Local Impact */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Impact on Erdington</h2>
-              <div className="bg-reform-primary/5 p-8 rounded-xl">
-                <p className="text-lg text-gray-700 mb-6">
+              <h2 className="text-3xl font-bold mb-8 text-reform-dark dark:text-white">Impact on Erdington</h2>
+              <div className="bg-reform-primary/5 dark:bg-gray-800 p-8 rounded-xl">
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
                   Our NHS reform plan will deliver real improvements for Erdington residents:
                 </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-4">
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-4">
                   <li>Shorter waiting times at local hospitals</li>
                   <li>Better access to GP services</li>
                   <li>Improved local mental health support</li>

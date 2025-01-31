@@ -30,18 +30,18 @@ const AboutPage = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">{mission.title}</h2>
-            <p className="text-xl text-gray-600 mb-12">{mission.text}</p>
+            <h2 className="text-4xl font-bold mb-6 text-reform-dark dark:text-white">{mission.title}</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">{mission.text}</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {mission.points.map((point, index) => (
                 <div 
                   key={index}
-                  className="bg-reform-gray p-6 rounded-xl hover:shadow-lg transition-all transform hover:-translate-y-1"
+                  className="bg-reform-gray dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all transform hover:-translate-y-1"
                 >
-                  <p className="text-lg font-medium text-gray-800">{point}</p>
+                  <p className="text-lg font-medium text-gray-800 dark:text-gray-200">{point}</p>
                 </div>
               ))}
             </div>

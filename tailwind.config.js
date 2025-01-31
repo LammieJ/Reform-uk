@@ -17,7 +17,7 @@ export default {
       },
       fontFamily: {
         heading: ['var(--font-montserrat)', 'sans-serif'],
-        sans: ['var(--font-inter)', 'sans-serif'],
+        sans: ['var(--font-roboto)', 'sans-serif'],
       },
       typography: (theme) => ({
         DEFAULT: {
